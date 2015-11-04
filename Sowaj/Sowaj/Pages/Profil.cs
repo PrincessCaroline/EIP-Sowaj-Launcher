@@ -12,11 +12,15 @@ namespace Sowaj
 {
     public partial class Profil : Form
     {
-        public Profil()
+        Sowaj s;
+
+        public Profil(Sowaj _s)
         {
             InitializeComponent();
+            s = _s;
             InitializePanels();
             pnlAvatarChoose.Hide();
+            FirstConnection();
         }
 
         private void InitializePanels()
@@ -27,6 +31,24 @@ namespace Sowaj
             chooseAvatarPanel.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             chooseAvatarPanel.Dock = DockStyle.Fill;
             chooseAvatarPanel.Show();
+        }
+
+        private void FirstConnection()
+        {
+            ChooseClass chooseClass = new ChooseClass(this);
+
+            //fill profil panel with profil form
+            chooseClass.TopLevel = false;
+            pnlChooseClass.Controls.Add(chooseClass);
+            chooseClass.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            chooseClass.Dock = DockStyle.Fill;
+            chooseClass.Show();
+//            Console.WriteLine("profil panel init: DONE");
+        }
+
+        public void setClass(int classIndex)
+        {
+            pnlChooseClass.Hide();
         }
 
         public void setAvatar(Image newAvatar)

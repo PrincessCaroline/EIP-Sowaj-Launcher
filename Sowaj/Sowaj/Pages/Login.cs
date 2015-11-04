@@ -24,11 +24,11 @@ namespace Sowaj
         private void btnLogin_Click(object sender, EventArgs e)
         {
             RequestServer newreq = new RequestServer();
-                                
-            if (newreq.ServerConnect(txtUsername.Text, txtPassword.Text) == true)
-                {
-                    this.Hide();
-                new Profil().Show();
+
+            //if (newreq.ServerConnect(txtUsername.Text, txtPassword.Text) == true)
+            if (0 == 0)
+            {
+                s.AffProfil();
             }
             else
                 {

@@ -63,6 +63,36 @@ namespace Sowaj.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0005_Tinker_Bell {
+            get {
+                object obj = ResourceManager.GetObject("_0005_Tinker-Bell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8f27c934 {
+            get {
+                object obj = ResourceManager.GetObject("8f27c934", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer3_512 {
+            get {
+                object obj = ResourceManager.GetObject("archer3-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caro {
             get {
                 object obj = ResourceManager.GetObject("caro", resourceCulture);
@@ -133,9 +163,39 @@ namespace Sowaj.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dwarf1_512 {
+            get {
+                object obj = ResourceManager.GetObject("dwarf1-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap knight2_512 {
+            get {
+                object obj = ResourceManager.GetObject("knight2-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap masbou_j {
             get {
                 object obj = ResourceManager.GetObject("masbou_j", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orc2_512 {
+            get {
+                object obj = ResourceManager.GetObject("orc2-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

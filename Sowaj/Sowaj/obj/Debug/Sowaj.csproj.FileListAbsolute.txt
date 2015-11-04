@@ -12,6 +12,3 @@ C:\Users\PrincessCaroline\Documents\Visual Studio 2015\Projects\Sowaj\Sowaj\obj\
 C:\Users\PrincessCaroline\Documents\Visual Studio 2015\Projects\Sowaj\Sowaj\obj\Debug\Sowaj.Profil.resources
 C:\Users\PrincessCaroline\Documents\Visual Studio 2015\Projects\Sowaj\Sowaj\obj\Debug\Sowaj.ChooseAvatar.resources
 C:\Users\PrincessCaroline\Documents\Visual Studio 2015\Projects\Sowaj\Sowaj\obj\Debug\Sowaj.ChooseClass.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\Sowaj.exe.config
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.exe
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.pdb

@@ -56,6 +56,7 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.pnlAvatarChoose = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.pnlChooseClass = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -344,11 +345,19 @@
             this.btnSettings.Text = "Options";
             this.btnSettings.UseVisualStyleBackColor = false;
             // 
+            // pnlChooseClass
+            // 
+            this.pnlChooseClass.Location = new System.Drawing.Point(0, 0);
+            this.pnlChooseClass.Name = "pnlChooseClass";
+            this.pnlChooseClass.Size = new System.Drawing.Size(1263, 799);
+            this.pnlChooseClass.TabIndex = 10;
+            // 
             // Profil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 763);
+            this.Controls.Add(this.pnlChooseClass);
             this.Controls.Add(this.pnlAvatarChoose);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSettings);
@@ -395,5 +404,6 @@
         private System.Windows.Forms.Button btnDeck;
         private System.Windows.Forms.Panel pnlAvatarChoose;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Panel pnlChooseClass;
     }
 }
