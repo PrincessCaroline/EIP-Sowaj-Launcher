@@ -12,15 +12,18 @@ namespace Sowaj
 {
     public partial class Profil : Form
     {
-        Sowaj s;
+        public Sowaj s;
+        private ClientInfos client = new ClientInfos();
 
         public Profil(Sowaj _s)
         {
             InitializeComponent();
             s = _s;
+            s.music.Play();
             InitializePanels();
-            pnlAvatarChoose.Hide();
-            FirstConnection();
+            HidePanel();
+            InitializeClientInfos();
+            //FirstConnection();
         }
 
         private void InitializePanels()
@@ -31,19 +34,47 @@ namespace Sowaj
             chooseAvatarPanel.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             chooseAvatarPanel.Dock = DockStyle.Fill;
             chooseAvatarPanel.Show();
-        }
 
-        private void FirstConnection()
-        {
+            Options optionPanel = new Options(this);
+            optionPanel.TopLevel = false;
+            pnlOptions.Controls.Add(optionPanel);
+            optionPanel.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            optionPanel.Dock = DockStyle.Fill;
+            optionPanel.Show();
+
             ChooseClass chooseClass = new ChooseClass(this);
-
-            //fill profil panel with profil form
             chooseClass.TopLevel = false;
             pnlChooseClass.Controls.Add(chooseClass);
             chooseClass.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             chooseClass.Dock = DockStyle.Fill;
             chooseClass.Show();
-//            Console.WriteLine("profil panel init: DONE");
+
+        }
+        private void HidePanel()
+        {
+            pnlAvatarChoose.Hide();
+            pnlOptions.Hide();
+            pnlChooseClass.Hide();
+        }
+        private void FirstConnection()
+        {
+
+        }
+
+        private void InitializeClientInfos()
+        {
+            client.ClientInfos_Init();
+            lblLogin.Text = client.getPlayerName();
+            lblExperience.Text = client.getExp() + "/1000";
+            progressBarExperience.Maximum = 1000;
+            progressBarExperience.Minimum = 0;
+            progressBarExperience.Value = client.getExp();
+            lblLevelNumber.Text = client.getLevel().ToString();
+            lblGamesNumber.Text = client.getNBgames().ToString();
+            lblVictoryNumber.Text = client.getNBvictories().ToString();
+            lblLooseNumber.Text = client.getNBdefeats().ToString();
+
+
         }
 
         public void setClass(int classIndex)
@@ -60,6 +91,16 @@ namespace Sowaj
         private void btnAvatar_Click(object sender, EventArgs e)
         {
             pnlAvatarChoose.Show();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            pnlOptions.Show();
+        }
+
+        public void closeOptions()
+        {
+            pnlOptions.Hide();
         }
     }
 }

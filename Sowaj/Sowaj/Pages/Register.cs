@@ -13,12 +13,15 @@ namespace Sowaj
     public partial class Register : Form
     {
         Sowaj s;
+
         public Register(Sowaj _s)
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
             txtPasswordcomfirm.PasswordChar = '*';
             hideError();
+            pctLoginAvaible.Hide();
+
             s = _s;
         }
 
@@ -43,6 +46,25 @@ namespace Sowaj
             {
                 return false;
             }
+        }
+
+        private void txtLogin_Leave(object sender, EventArgs e)
+        {
+            pctLoginAvaible.Hide();
+            RequestServer newreq = new RequestServer();
+
+            if (newreq.LoginAvaible(txtLogin.Text) == false)
+            {
+                lblLoginWrong.Text = "Le pseudo que vous avez choisit n'est pas disponible.";
+                lblLoginWrong.Show();
+                btnCreateAccount.Hide();
+            }
+            else
+            {
+                btnCreateAccount.Show();
+                pctLoginAvaible.Show();
+            }
+
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)

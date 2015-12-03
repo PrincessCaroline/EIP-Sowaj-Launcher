@@ -57,6 +57,7 @@
             this.pnlAvatarChoose = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.pnlChooseClass = new System.Windows.Forms.Panel();
+            this.pnlOptions = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -147,7 +148,7 @@
             this.lblExperience.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExperience.BackColor = System.Drawing.Color.Transparent;
             this.lblExperience.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblExperience.Location = new System.Drawing.Point(56, 187);
+            this.lblExperience.Location = new System.Drawing.Point(56, 182);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExperience.Size = new System.Drawing.Size(146, 17);
@@ -328,7 +329,7 @@
             // 
             this.pnlAvatarChoose.AutoScroll = true;
             this.pnlAvatarChoose.BackColor = System.Drawing.Color.Transparent;
-            this.pnlAvatarChoose.Location = new System.Drawing.Point(285, 130);
+            this.pnlAvatarChoose.Location = new System.Drawing.Point(274, 110);
             this.pnlAvatarChoose.Name = "pnlAvatarChoose";
             this.pnlAvatarChoose.Size = new System.Drawing.Size(722, 500);
             this.pnlAvatarChoose.TabIndex = 9;
@@ -344,25 +345,37 @@
             this.btnSettings.TabIndex = 0;
             this.btnSettings.Text = "Options";
             this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // pnlChooseClass
             // 
-            this.pnlChooseClass.Location = new System.Drawing.Point(0, 0);
+            this.pnlChooseClass.Location = new System.Drawing.Point(40, 757);
             this.pnlChooseClass.Name = "pnlChooseClass";
             this.pnlChooseClass.Size = new System.Drawing.Size(1263, 799);
             this.pnlChooseClass.TabIndex = 10;
+            // 
+            // pnlOptions
+            // 
+            this.pnlOptions.AutoScroll = true;
+            this.pnlOptions.BackColor = System.Drawing.Color.Transparent;
+            this.pnlOptions.Location = new System.Drawing.Point(274, 110);
+            this.pnlOptions.Name = "pnlOptions";
+            this.pnlOptions.Size = new System.Drawing.Size(722, 500);
+            this.pnlOptions.TabIndex = 9;
+            this.pnlOptions.Visible = false;
             // 
             // Profil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 763);
-            this.Controls.Add(this.pnlChooseClass);
+            this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.pnlAvatarChoose);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlChooseClass);
             this.Name = "Profil";
             this.Text = "Profil";
             this.panel1.ResumeLayout(false);
@@ -405,5 +418,6 @@
         private System.Windows.Forms.Panel pnlAvatarChoose;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel pnlChooseClass;
+        private System.Windows.Forms.Panel pnlOptions;
     }
 }

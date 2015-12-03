@@ -25,8 +25,8 @@ namespace Sowaj
         {
             RequestServer newreq = new RequestServer();
 
-            //if (newreq.ServerConnect(txtUsername.Text, txtPassword.Text) == true)
-            if (0 == 0)
+            if (newreq.ServerConnect(txtUsername.Text, txtPassword.Text, "mail") == true)
+           // if (0 == 0)
             {
                 s.AffProfil();
             }

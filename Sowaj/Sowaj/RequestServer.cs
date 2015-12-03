@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Sowaj
 {
     class RequestServer
     {
 
-        private String url = "http://epitech-api.herokuapp.com/";
+        //private String url = "http://epitech-api.herokuapp.com/";
+        private String url = "http://163.5.84.192:80/SowajServer/";
 
         public String SendRequest(String requestName, byte[] param, String method)
         {
@@ -63,21 +65,106 @@ namespace Sowaj
             return (responseFromServer);
         }
 
-        public bool ServerConnect(String username, String pwd)
+        public String SendHttpRequest(String requestName, byte[] param, String method)
+        {
+            url += requestName;
+            HttpWebResponse response = null;
+
+            try
+            {
+                // Create a request using a URL that can receive a post. 
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.AllowAutoRedirect = false;
+
+            // Set the Method property of the request to POST.
+            request.Method = method;
+
+            // Set the ContentType property of the WebRequest.
+            request.ContentType = "application/x-www-form-urlencoded";
+
+            // Set the ContentLength property of the WebRequest.
+            request.ContentLength = param.Length;
+
+            // Get the request stream.
+            Stream dataStream = request.GetRequestStream();
+
+            // Write the data to the request stream.
+            dataStream.Write(param, 0, param.Length);
+
+            // Close the Stream object.
+            dataStream.Close();
+
+          
+        
+            response = (HttpWebResponse)request.GetResponse();
+
+            StreamReader sr = new StreamReader(response.GetResponseStream());
+            Console.Write(sr.ReadToEnd());
+            Console.WriteLine(((int)response.StatusCode).ToString());
+            return (((int)response.StatusCode).ToString());
+            }
+            catch (WebException e)
+        {
+            if (e.Status == WebExceptionStatus.ProtocolError)
+            {
+                response = (HttpWebResponse)e.Response;
+                Console.Write("CATCH : Errorcode: {0}", (int)response.StatusCode);
+                return (((int)response.StatusCode).ToString());
+            }
+            else
+            {
+                Console.Write("CATCH : Error: {0}", e.Status);
+                return (e.Status.ToString());
+            }
+        }
+        finally
+        {
+            if (response != null)
+            {
+                response.Close();
+            }
+        }
+ //           MessageBox.Show((int)httpRes.StatusCode);
+        }
+
+        public bool ServerConnect(String username, String pwd, String mail)
         {
             // Create POST data and convert it to a byte array.
-            string postData = "login="+username+"&password="+pwd;
+            string postData = "login="+username+"&password="+pwd+"&"+mail;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            SendRequest("login", byteArray, "POST");
+            //Send connection request with param
+            SendHttpRequest("connection", byteArray, "POST");
             return (true);
         }
 
-        public void PlayerInfos(String token)
+        public bool LoginAvaible(String login)
+        {
+            // Create POST data and convert it to a byte array.
+            string postData = "login=" + login;
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            //SendRequest("login", byteArray, "POST");
+            if (SendHttpRequest("login", byteArray, "POST") == "200")
+                return (true);
+            else
+                return (false);
+        }
+
+        public void Register(String username, String password, String mail)
+        {
+            // Create POST data and convert it to a byte array.
+            string postData = "username=" + username + "&password" + password + "&email" + mail;
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            //SendRequest("login", byteArray, "POST");
+            SendHttpRequest("registration", byteArray, "POST");
+        }
+
+        public void PlayerInfos(String token, int playerId)
         {
             // Create POST data and convert it to a byte array.
             string postData = "token=" + token;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            SendRequest("infosplayer", byteArray, "POST");
+            //SendRequest("infosplayer", byteArray, "POST");
+            SendHttpRequest("infosplayer", byteArray, "POST");
         }
     }
 }

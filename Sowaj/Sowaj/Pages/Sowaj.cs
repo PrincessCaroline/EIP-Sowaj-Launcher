@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace Sowaj
 {
     public partial class Sowaj : Form
     {
-
+        public SoundPlayer music = new SoundPlayer(@"C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\Resources\music.wav");
         public Sowaj()
         {
             InitializeComponent();            

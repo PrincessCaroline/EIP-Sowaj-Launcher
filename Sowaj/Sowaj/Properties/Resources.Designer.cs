@@ -63,19 +63,9 @@ namespace Sowaj.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _0005_Tinker_Bell {
+        internal static System.Drawing.Bitmap _1447310536_bullet_valid {
             get {
-                object obj = ResourceManager.GetObject("_0005_Tinker-Bell", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _8f27c934 {
-            get {
-                object obj = ResourceManager.GetObject("8f27c934", resourceCulture);
+                object obj = ResourceManager.GetObject("1447310536_bullet_valid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

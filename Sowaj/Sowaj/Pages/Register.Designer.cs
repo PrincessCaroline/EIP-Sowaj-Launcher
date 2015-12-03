@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPasswordWrong = new System.Windows.Forms.Label();
+            this.pctLoginAvaible = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLoginAvaible)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,6 +140,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(236, 22);
             this.txtLogin.TabIndex = 15;
+            this.txtLogin.Leave += new System.EventHandler(this.txtLogin_Leave);
             // 
             // lblMailWrong
             // 
@@ -175,6 +178,15 @@
             this.lblPasswordWrong.TabIndex = 26;
             this.lblPasswordWrong.Text = "Votre mot de passe de confirmation doit être identique à votre mot de passe.";
             // 
+            // pctLoginAvaible
+            // 
+            this.pctLoginAvaible.Image = global::Sowaj.Properties.Resources._1447310536_bullet_valid;
+            this.pctLoginAvaible.Location = new System.Drawing.Point(254, 14);
+            this.pctLoginAvaible.Name = "pctLoginAvaible";
+            this.pctLoginAvaible.Size = new System.Drawing.Size(41, 42);
+            this.pctLoginAvaible.TabIndex = 29;
+            this.pctLoginAvaible.TabStop = false;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,8 +207,10 @@
             this.Controls.Add(this.lblMailWrong);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.pctLoginAvaible);
             this.Name = "Register";
             this.Text = "Register";
+            ((System.ComponentModel.ISupportInitialize)(this.pctLoginAvaible)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +233,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblPasswordWrong;
+        private System.Windows.Forms.PictureBox pctLoginAvaible;
     }
 }
