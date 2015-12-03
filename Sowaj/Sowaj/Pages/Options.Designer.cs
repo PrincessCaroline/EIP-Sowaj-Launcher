@@ -35,12 +35,15 @@
             this.btnMusicOn = new System.Windows.Forms.Button();
             this.btnMusicOff = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnChooseEnglish = new System.Windows.Forms.Button();
+            this.btnChooseFrench = new System.Windows.Forms.Button();
+            this.lblLanguages = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSound
             // 
             this.lblSound.AutoSize = true;
-            this.lblSound.Location = new System.Drawing.Point(213, 206);
+            this.lblSound.Location = new System.Drawing.Point(218, 206);
             this.lblSound.Name = "lblSound";
             this.lblSound.Size = new System.Drawing.Size(49, 17);
             this.lblSound.TabIndex = 0;
@@ -69,7 +72,7 @@
             // lblMusic
             // 
             this.lblMusic.AutoSize = true;
-            this.lblMusic.Location = new System.Drawing.Point(213, 179);
+            this.lblMusic.Location = new System.Drawing.Point(223, 179);
             this.lblMusic.Name = "lblMusic";
             this.lblMusic.Size = new System.Drawing.Size(44, 17);
             this.lblMusic.TabIndex = 0;
@@ -105,6 +108,35 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnChooseEnglish
+            // 
+            this.btnChooseEnglish.Location = new System.Drawing.Point(349, 276);
+            this.btnChooseEnglish.Name = "btnChooseEnglish";
+            this.btnChooseEnglish.Size = new System.Drawing.Size(75, 23);
+            this.btnChooseEnglish.TabIndex = 1;
+            this.btnChooseEnglish.Text = "English";
+            this.btnChooseEnglish.UseVisualStyleBackColor = true;
+            this.btnChooseEnglish.Click += new System.EventHandler(this.btnChooseEnglish_Click);
+            // 
+            // btnChooseFrench
+            // 
+            this.btnChooseFrench.Location = new System.Drawing.Point(268, 276);
+            this.btnChooseFrench.Name = "btnChooseFrench";
+            this.btnChooseFrench.Size = new System.Drawing.Size(75, 23);
+            this.btnChooseFrench.TabIndex = 1;
+            this.btnChooseFrench.Text = "Français";
+            this.btnChooseFrench.UseVisualStyleBackColor = true;
+            this.btnChooseFrench.Click += new System.EventHandler(this.btnChooseFrench_Click);
+            // 
+            // lblLanguages
+            // 
+            this.lblLanguages.AutoSize = true;
+            this.lblLanguages.Location = new System.Drawing.Point(195, 279);
+            this.lblLanguages.Name = "lblLanguages";
+            this.lblLanguages.Size = new System.Drawing.Size(72, 17);
+            this.lblLanguages.TabIndex = 0;
+            this.lblLanguages.Text = "Language";
+            // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,10 +144,13 @@
             this.ClientSize = new System.Drawing.Size(643, 421);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnMusicOff);
+            this.Controls.Add(this.btnChooseFrench);
             this.Controls.Add(this.btnSoundOff);
             this.Controls.Add(this.btnMusicOn);
             this.Controls.Add(this.lblMusic);
+            this.Controls.Add(this.btnChooseEnglish);
             this.Controls.Add(this.btnSoundOn);
+            this.Controls.Add(this.lblLanguages);
             this.Controls.Add(this.lblSound);
             this.Name = "Options";
             this.Text = "Options";
@@ -133,5 +168,8 @@
         private System.Windows.Forms.Button btnMusicOn;
         private System.Windows.Forms.Button btnMusicOff;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnChooseEnglish;
+        private System.Windows.Forms.Button btnChooseFrench;
+        private System.Windows.Forms.Label lblLanguages;
     }
 }

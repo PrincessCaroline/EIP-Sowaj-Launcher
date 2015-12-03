@@ -28,11 +28,6 @@ C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\De
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.csproj.GenerateResource.Cache
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Options.resources
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\qps-ploc\Sowaj.resources.dll
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.ChooseAvatar.qps-ploc.qps-ploc.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.ChooseClass.qps-ploc.qps-ploc.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.Login.qps-ploc.qps-ploc.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.Options.qps-ploc.qps-ploc.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.Profil.qps-ploc.qps-ploc.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.Register.qps-ploc.qps-ploc.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Pages.Sowaj.qps-ploc.qps-ploc.resources
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Properties.Resources.qps-ploc.qps-ploc.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.en.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.fr.resources

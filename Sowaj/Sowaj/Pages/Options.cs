@@ -44,5 +44,15 @@ namespace Sowaj
         {
             p.closeOptions();
         }
+
+        private void btnChooseFrench_Click(object sender, EventArgs e)
+        {
+            p.switch_language('f');
+        }
+
+        private void btnChooseEnglish_Click(object sender, EventArgs e)
+        {
+            p.switch_language('e');
+        }
     }
 }

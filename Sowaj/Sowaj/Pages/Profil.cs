@@ -8,12 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Globalization;
+using System.Resources;
+
 namespace Sowaj
 {
     public partial class Profil : Form
     {
+        ResourceManager res_man = new ResourceManager(typeof(fr));    // declare Resource manager to access to specific cultureinfo
+
         public Sowaj s;
         private ClientInfos client = new ClientInfos();
+
+        public void switch_language(char c)
+        {
+            if (c == 'f')    //in vietnamese
+            {
+                 res_man = new ResourceManager(typeof(fr));
+            }
+            else                                                //in english
+            {
+                res_man = new ResourceManager(typeof(en));
+            }
+            load_text();
+        }
+
+        private void load_text()
+        {
+            btnPlay.Text = res_man.GetString("btnPlay");
+        }
 
         public Profil(Sowaj _s)
         {
@@ -24,6 +47,7 @@ namespace Sowaj
             HidePanel();
             InitializeClientInfos();
             //FirstConnection();
+            load_text();
         }
 
         private void InitializePanels()

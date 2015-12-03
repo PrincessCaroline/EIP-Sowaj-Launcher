@@ -4,6 +4,13 @@
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
     </header>
-    <body />
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/btnPlay.content" translate="yes" xml:space="preserve">
+          <source>lalalal</source>
+          <target state="new">lalalal</target>
+        </trans-unit>
+      </group>
+    </body>
   </file>
 </xliff>

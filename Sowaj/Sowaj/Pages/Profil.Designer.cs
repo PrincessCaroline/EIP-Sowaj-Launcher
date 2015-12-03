@@ -316,6 +316,7 @@
             // 
             // btnPlay
             // 
+            this.btnPlay.AccessibleName = "btnPlay";
             this.btnPlay.BackColor = System.Drawing.Color.Transparent;
             this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPlay.Location = new System.Drawing.Point(3, 3);

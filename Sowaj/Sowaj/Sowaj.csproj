@@ -33,9 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Label="MultilingualAppToolkit">
-    <MultilingualAppToolkitVersion>3.0</MultilingualAppToolkitVersion>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientInfos.cs" />
+    <Compile Include="en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Options.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,29 +108,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RequestServer.cs" />
-    <EmbeddedResource Include="Pages\ChooseAvatar.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ChooseAvatar.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
+    <EmbeddedResource Include="en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\ChooseClass.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ChooseClass.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Login.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Login.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Options.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Options.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
+    <EmbeddedResource Include="fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
@@ -137,26 +128,8 @@
     <EmbeddedResource Include="Pages\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Profil.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Profil.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pages\Profil.resx">
       <DependentUpon>Profil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Register.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Register.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Sowaj.qps-ploc.resx">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Sowaj.qps-ploc.xlf</DependentUpon>
-      <culture>qps-ploc</culture>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.qps-ploc.resx">
       <AutoGen>True</AutoGen>
@@ -228,41 +201,12 @@
     <None Include="Resources\1447310536_bullet_valid.png" />
   </ItemGroup>
   <ItemGroup>
-    <XliffResource Include="Pages\ChooseAvatar.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>ChooseAvatar.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Pages\ChooseClass.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>ChooseClass.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Pages\Login.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>Login.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Pages\Options.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>Options.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Pages\Profil.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>Profil.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Pages\Register.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>Register.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
-    <XliffResource Include="Pages\Sowaj.qps-ploc.xlf">
-      <Generator>XliffResxGenerator</Generator>
-      <LastGenOutput>Sowaj.qps-ploc.resx</LastGenOutput>
-    </XliffResource>
     <XliffResource Include="Properties\Resources.qps-ploc.xlf">
       <Generator>XliffResxGenerator</Generator>
       <LastGenOutput>Resources.qps-ploc.resx</LastGenOutput>
     </XliffResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
