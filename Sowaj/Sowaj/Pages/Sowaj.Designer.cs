@@ -45,14 +45,14 @@
             // 
             // pnlRegister
             // 
-            this.pnlRegister.Location = new System.Drawing.Point(616, 269);
+            this.pnlRegister.Location = new System.Drawing.Point(616, 130);
             this.pnlRegister.Name = "pnlRegister";
-            this.pnlRegister.Size = new System.Drawing.Size(408, 409);
+            this.pnlRegister.Size = new System.Drawing.Size(602, 672);
             this.pnlRegister.TabIndex = 1;
             // 
             // pnlProfil
             // 
-            this.pnlProfil.Location = new System.Drawing.Point(191, 62);
+            this.pnlProfil.Location = new System.Drawing.Point(191, 50);
             this.pnlProfil.Name = "pnlProfil";
             this.pnlProfil.Size = new System.Drawing.Size(1276, 810);
             this.pnlProfil.TabIndex = 2;

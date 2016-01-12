@@ -14,6 +14,7 @@ namespace Sowaj
     public partial class Sowaj : Form
     {
         public SoundPlayer music = new SoundPlayer(@"C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\Resources\music.wav");
+        public Token tokenConnection;
         public Sowaj()
         {
             InitializeComponent();            

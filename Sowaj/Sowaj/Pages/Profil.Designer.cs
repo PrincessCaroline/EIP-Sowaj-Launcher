@@ -58,6 +58,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.pnlChooseClass = new System.Windows.Forms.Panel();
             this.pnlOptions = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -291,6 +292,7 @@
             this.btnFriends.TabIndex = 0;
             this.btnFriends.Text = "Mes Amis";
             this.btnFriends.UseVisualStyleBackColor = false;
+            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
             // 
             // btnShop
             // 
@@ -350,7 +352,7 @@
             // 
             // pnlChooseClass
             // 
-            this.pnlChooseClass.Location = new System.Drawing.Point(40, 757);
+            this.pnlChooseClass.Location = new System.Drawing.Point(1181, 753);
             this.pnlChooseClass.Name = "pnlChooseClass";
             this.pnlChooseClass.Size = new System.Drawing.Size(1263, 799);
             this.pnlChooseClass.TabIndex = 10;
@@ -365,18 +367,26 @@
             this.pnlOptions.TabIndex = 9;
             this.pnlOptions.Visible = false;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(225, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(825, 739);
+            this.panel4.TabIndex = 11;
+            // 
             // Profil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 763);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlChooseClass);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.pnlAvatarChoose);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnlChooseClass);
             this.Name = "Profil";
             this.Text = "Profil";
             this.panel1.ResumeLayout(false);
@@ -420,5 +430,6 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel pnlChooseClass;
         private System.Windows.Forms.Panel pnlOptions;
+        private System.Windows.Forms.Panel panel4;
     }
 }

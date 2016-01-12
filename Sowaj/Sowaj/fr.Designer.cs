@@ -61,11 +61,110 @@ namespace Sowaj {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Jouere.
+        ///   Recherche une chaîne localisée semblable à Ma collection.
+        /// </summary>
+        internal static string btnDeck {
+            get {
+                return ResourceManager.GetString("btnDeck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Mes amis.
+        /// </summary>
+        internal static string btnFriends {
+            get {
+                return ResourceManager.GetString("btnFriends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Jouer.
         /// </summary>
         internal static string btnPlay {
             get {
                 return ResourceManager.GetString("btnPlay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Options.
+        /// </summary>
+        internal static string btnSettings {
+            get {
+                return ResourceManager.GetString("btnSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Boutique.
+        /// </summary>
+        internal static string btnShop {
+            get {
+                return ResourceManager.GetString("btnShop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de cartes.
+        /// </summary>
+        internal static string lblCard {
+            get {
+                return ResourceManager.GetString("lblCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de parties.
+        /// </summary>
+        internal static string lblGames {
+            get {
+                return ResourceManager.GetString("lblGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de defaites.
+        /// </summary>
+        internal static string lblLoose {
+            get {
+                return ResourceManager.GetString("lblLoose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Pièce d&apos;or.
+        /// </summary>
+        internal static string lblMoney {
+            get {
+                return ResourceManager.GetString("lblMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Rang.
+        /// </summary>
+        internal static string lblRank {
+            get {
+                return ResourceManager.GetString("lblRank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de trophée.
+        /// </summary>
+        internal static string lblTrophy {
+            get {
+                return ResourceManager.GetString("lblTrophy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de victoires.
+        /// </summary>
+        internal static string lblVictory {
+            get {
+                return ResourceManager.GetString("lblVictory", resourceCulture);
             }
         }
     }

@@ -44,6 +44,12 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPasswordWrong = new System.Windows.Forms.Label();
             this.pctLoginAvaible = new System.Windows.Forms.PictureBox();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblBirthDate = new System.Windows.Forms.Label();
+            this.dteBirthdate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pctLoginAvaible)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +92,7 @@
             // 
             this.lblFillAllField.AutoSize = true;
             this.lblFillAllField.ForeColor = System.Drawing.Color.Crimson;
-            this.lblFillAllField.Location = new System.Drawing.Point(12, 270);
+            this.lblFillAllField.Location = new System.Drawing.Point(9, 472);
             this.lblFillAllField.Name = "lblFillAllField";
             this.lblFillAllField.Size = new System.Drawing.Size(220, 17);
             this.lblFillAllField.TabIndex = 27;
@@ -110,10 +116,10 @@
             // 
             // btnCreateAccount
             // 
-            this.btnCreateAccount.Location = new System.Drawing.Point(151, 328);
+            this.btnCreateAccount.Location = new System.Drawing.Point(402, 466);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(97, 29);
-            this.btnCreateAccount.TabIndex = 20;
+            this.btnCreateAccount.TabIndex = 23;
             this.btnCreateAccount.Text = "S\'enregistrer";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -187,13 +193,67 @@
             this.pctLoginAvaible.TabIndex = 29;
             this.pctLoginAvaible.TabStop = false;
             // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(15, 291);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(57, 17);
+            this.lblFirstName.TabIndex = 30;
+            this.lblFirstName.Text = "Prénom";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(12, 311);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(236, 22);
+            this.txtFirstName.TabIndex = 20;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(12, 359);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(236, 22);
+            this.txtLastName.TabIndex = 21;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(15, 339);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(101, 17);
+            this.lblLastName.TabIndex = 30;
+            this.lblLastName.Text = "Nom de famille";
+            // 
+            // lblBirthDate
+            // 
+            this.lblBirthDate.AutoSize = true;
+            this.lblBirthDate.Location = new System.Drawing.Point(15, 403);
+            this.lblBirthDate.Name = "lblBirthDate";
+            this.lblBirthDate.Size = new System.Drawing.Size(126, 17);
+            this.lblBirthDate.TabIndex = 30;
+            this.lblBirthDate.Text = "Date de naissance";
+            // 
+            // dteBirthdate
+            // 
+            this.dteBirthdate.Location = new System.Drawing.Point(12, 423);
+            this.dteBirthdate.Name = "dteBirthdate";
+            this.dteBirthdate.Size = new System.Drawing.Size(200, 22);
+            this.dteBirthdate.TabIndex = 22;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 361);
+            this.ClientSize = new System.Drawing.Size(506, 501);
+            this.Controls.Add(this.dteBirthdate);
+            this.Controls.Add(this.lblBirthDate);
+            this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.lblLoginWrong);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtPasswordcomfirm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblFillAllField);
@@ -234,5 +294,11 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblPasswordWrong;
         private System.Windows.Forms.PictureBox pctLoginAvaible;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblBirthDate;
+        private System.Windows.Forms.DateTimePicker dteBirthdate;
     }
 }

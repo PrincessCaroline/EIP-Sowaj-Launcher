@@ -19,34 +19,16 @@ namespace Sowaj
 
         public Sowaj s;
         private ClientInfos client = new ClientInfos();
-
-        public void switch_language(char c)
-        {
-            if (c == 'f')    //in vietnamese
-            {
-                 res_man = new ResourceManager(typeof(fr));
-            }
-            else                                                //in english
-            {
-                res_man = new ResourceManager(typeof(en));
-            }
-            load_text();
-        }
-
-        private void load_text()
-        {
-            btnPlay.Text = res_man.GetString("btnPlay");
-        }
-
+  
         public Profil(Sowaj _s)
         {
             InitializeComponent();
             s = _s;
-            s.music.Play();
+            //s.music.Play();
             InitializePanels();
             HidePanel();
             InitializeClientInfos();
-            //FirstConnection();
+            FirstConnection();
             load_text();
         }
 
@@ -82,8 +64,38 @@ namespace Sowaj
         }
         private void FirstConnection()
         {
-
+            pnlChooseClass.Show();
         }
+
+        public void switch_language(char c)
+        {
+            if (c == 'f')
+            {
+                res_man = new ResourceManager(typeof(fr));
+            }
+            else                                                //in english
+            {
+                res_man = new ResourceManager(typeof(en));
+            }
+            load_text();
+        }
+
+        private void load_text()
+        {
+            btnPlay.Text = res_man.GetString("btnPlay");
+            btnDeck.Text = res_man.GetString("btnDeck");
+            btnFriends.Text = res_man.GetString("btnFriends");
+            btnShop.Text = res_man.GetString("btnShop");
+            lblCard.Text = res_man.GetString("lblCard");
+            lblRank.Text = res_man.GetString("lblRank");
+            btnMoney.Text = res_man.GetString("lblMoney");
+            lblTrophy.Text = res_man.GetString("lblTophy");
+            lblGames.Text = res_man.GetString("lblGames");
+            lblVictory.Text = res_man.GetString("lblVictory");
+            lblLoose.Text = res_man.GetString("lblLoose");
+            btnSettings.Text = res_man.GetString("btnSettings");
+        }
+
 
         private void InitializeClientInfos()
         {
@@ -125,6 +137,11 @@ namespace Sowaj
         public void closeOptions()
         {
             pnlOptions.Hide();
+        }
+
+        private void btnFriends_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

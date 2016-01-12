@@ -117,7 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnDeck" xml:space="preserve">
+    <value>Ma collection</value>
+  </data>
+  <data name="btnFriends" xml:space="preserve">
+    <value>Mes amis</value>
+  </data>
   <data name="btnPlay" xml:space="preserve">
-    <value>Jouere</value>
+    <value>Jouer</value>
+  </data>
+  <data name="btnSettings" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="btnShop" xml:space="preserve">
+    <value>Boutique</value>
+  </data>
+  <data name="lblCard" xml:space="preserve">
+    <value>Nombre de cartes</value>
+  </data>
+  <data name="lblGames" xml:space="preserve">
+    <value>Nombre de parties</value>
+  </data>
+  <data name="lblLoose" xml:space="preserve">
+    <value>Nombre de defaites</value>
+  </data>
+  <data name="lblMoney" xml:space="preserve">
+    <value>Pièce d'or</value>
+  </data>
+  <data name="lblRank" xml:space="preserve">
+    <value>Rang</value>
+  </data>
+  <data name="lblTrophy" xml:space="preserve">
+    <value>Nombre de trophée</value>
+  </data>
+  <data name="lblVictory" xml:space="preserve">
+    <value>Nombre de victoires</value>
   </data>
 </root>

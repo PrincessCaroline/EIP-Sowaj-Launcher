@@ -61,6 +61,7 @@ namespace Sowaj
             }
             else
             {
+                lblLoginWrong.Hide();
                 btnCreateAccount.Show();
                 pctLoginAvaible.Show();
             }
@@ -76,7 +77,9 @@ namespace Sowaj
                 txtEmailcomfirm.Text != "" &&
                 txtPasswordcomfirm.Text != "" &&
                 txtEmail.Text != "" &&
-                txtLogin.Text != "")
+                txtLogin.Text != "" &&
+                txtFirstName.Text != "" &&
+                txtLastName.Text != "")
             {
                 if (txtLogin.Text.Length < 5)
                 {
@@ -123,7 +126,14 @@ namespace Sowaj
                 //If every fields are correct  send Request to register.
                 if (allGood == true)
                 {
-                    s.AffLogin();
+                    RequestServer newreq = new RequestServer();
+                    if (newreq.Register(txtLogin.Text, txtPassword.Text, txtEmail.Text, txtFirstName.Text, txtLastName.Text, "KR", dteBirthdate.Value.Date.ToString("dd/MM/yyyy")) == true)
+                        s.AffLogin();
+                    else
+                    {
+                        lblFillAllField.Text = "Registration fail :B" + dteBirthdate.Value.Date.ToString("dd/MM/yyyy");
+                        lblFillAllField.Show();
+                    }
                 }
             }
             else
