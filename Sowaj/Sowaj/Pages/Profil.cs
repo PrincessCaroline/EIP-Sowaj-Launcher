@@ -18,7 +18,6 @@ namespace Sowaj
         ResourceManager res_man = new ResourceManager(typeof(fr));    // declare Resource manager to access to specific cultureinfo
 
         public Sowaj s;
-        private ClientInfos client = new ClientInfos();
   
         public Profil(Sowaj _s)
         {
@@ -27,13 +26,16 @@ namespace Sowaj
             //s.music.Play();
             InitializePanels();
             HidePanel();
+            s.client.setUnknow();
             InitializeClientInfos();
-            FirstConnection();
+            //FirstConnection();
             load_text();
         }
 
         private void InitializePanels()
         {
+            setHistory();
+
             ChooseAvatar chooseAvatarPanel = new ChooseAvatar(this);
             chooseAvatarPanel.TopLevel = false;
             pnlAvatarChoose.Controls.Add(chooseAvatarPanel);
@@ -67,6 +69,7 @@ namespace Sowaj
             pnlChooseClass.Show();
         }
 
+        //Method concerned by languages
         public void switch_language(char c)
         {
             if (c == 'f')
@@ -79,7 +82,6 @@ namespace Sowaj
             }
             load_text();
         }
-
         private void load_text()
         {
             btnPlay.Text = res_man.GetString("btnPlay");
@@ -89,28 +91,24 @@ namespace Sowaj
             lblCard.Text = res_man.GetString("lblCard");
             lblRank.Text = res_man.GetString("lblRank");
             btnMoney.Text = res_man.GetString("lblMoney");
-            lblTrophy.Text = res_man.GetString("lblTophy");
+            lblTrophy.Text = res_man.GetString("lblTrophy");
             lblGames.Text = res_man.GetString("lblGames");
             lblVictory.Text = res_man.GetString("lblVictory");
             lblLoose.Text = res_man.GetString("lblLoose");
             btnSettings.Text = res_man.GetString("btnSettings");
         }
 
-
-        private void InitializeClientInfos()
+        public void InitializeClientInfos()
         {
-            client.ClientInfos_Init();
-            lblLogin.Text = client.getPlayerName();
-            lblExperience.Text = client.getExp() + "/1000";
+            lblLogin.Text = s.client.nickName;
+            lblExperience.Text = s.client.points + "/" + s.client.maximum_points;
             progressBarExperience.Maximum = 1000;
             progressBarExperience.Minimum = 0;
-            progressBarExperience.Value = client.getExp();
-            lblLevelNumber.Text = client.getLevel().ToString();
-            lblGamesNumber.Text = client.getNBgames().ToString();
-            lblVictoryNumber.Text = client.getNBvictories().ToString();
-            lblLooseNumber.Text = client.getNBdefeats().ToString();
-
-
+            progressBarExperience.Value = s.client.points;
+            lblLevelNumber.Text = s.client.level.ToString();
+            //lblGamesNumber.Text = client.getNBgames().ToString();
+            //lblVictoryNumber.Text = client.getNBvictories().ToString();
+            //lblLooseNumber.Text = client.getNBdefeats().ToString();
         }
 
         public void setClass(int classIndex)
@@ -118,26 +116,79 @@ namespace Sowaj
             pnlChooseClass.Hide();
         }
 
+
+        //Method concerned by the AVATAR
         public void setAvatar(Image newAvatar)
         {
             btnAvatar.Image = newAvatar;
             pnlAvatarChoose.Hide();
+            pnlFightHistory.Show();
         }
 
         private void btnAvatar_Click(object sender, EventArgs e)
         {
             pnlAvatarChoose.Show();
+            pnlFightHistory.Hide();
         }
 
+
+        //Method concerned by the SETTINGS
         private void btnSettings_Click(object sender, EventArgs e)
         {
+            pnlFightHistory.Hide();
             pnlOptions.Show();
         }
 
-        public void closeOptions()
+        public void btnSettings_Close()
         {
             pnlOptions.Hide();
+            pnlFightHistory.Show();
         }
+
+
+
+        //Method concerned by the HISTORY
+        public int YPanelLocation = 1;
+        private Panel getFightHistory()
+        {
+            Panel newPanel = new Panel();
+            DetailPartie detail = new DetailPartie();
+
+            //setposition and size of the panel
+            newPanel.Location = new Point(1, YPanelLocation);
+            newPanel.Size = new Size(600, 186);
+
+            //add detailpartie view to newpanel
+            detail.TopLevel = false;
+            newPanel.Controls.Add(detail);
+            detail.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            detail.Dock = DockStyle.Fill;
+            detail.Show();
+
+            //add panel to this view
+            this.Controls.Add(newPanel);
+
+            YPanelLocation += 160;
+            return (newPanel);
+        }
+
+        private int gameNbr = 0;
+        private void setHistory()
+        {
+            pnlFightHistory.Controls.Clear();
+            YPanelLocation = 1;
+            for (int i = 0; i < gameNbr; i++)
+            {
+                pnlFightHistory.Controls.Add(getFightHistory());
+            }
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            gameNbr++;
+            setHistory();
+        }
+
 
         private void btnFriends_Click(object sender, EventArgs e)
         {

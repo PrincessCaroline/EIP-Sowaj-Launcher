@@ -183,6 +183,16 @@ namespace Sowaj.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Neryë {
+            get {
+                object obj = ResourceManager.GetObject("Neryë", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap orc2_512 {
             get {
                 object obj = ResourceManager.GetObject("orc2-512", resourceCulture);

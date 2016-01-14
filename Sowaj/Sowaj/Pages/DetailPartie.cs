@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sowaj.Pages
+namespace Sowaj
 {
     public partial class DetailPartie : Form
     {

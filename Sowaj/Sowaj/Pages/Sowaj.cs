@@ -15,11 +15,14 @@ namespace Sowaj
     {
         public SoundPlayer music = new SoundPlayer(@"C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\Resources\music.wav");
         public Token tokenConnection;
+        public ClientInfos client = new ClientInfos();
+
         public Sowaj()
         {
-            InitializeComponent();            
+            InitializeComponent();
             InitializePanel();
-            AffLogin();
+            //AffLogin();
+            AffProfil();
         }
 
         private void hidePanel()

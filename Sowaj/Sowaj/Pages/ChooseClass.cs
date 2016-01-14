@@ -29,12 +29,29 @@ namespace Sowaj
             pnlChooseElves.Hide();
             pnlChooseDwarfs.Hide();
             pnlChooseHuman.Hide();
+            pnlChooseNickname.Hide();
         }
 
+        //First next : GOTO choose nickname
         private void button1_Click(object sender, EventArgs e)
         {
             pnlStoryIntro.Hide();
-            pnlStoryHuman.Show();
+            pnlChooseNickname.Show();
+        }
+        //2nd next : GOTO  Storyhuman
+        private void btnNicknameOk_Click(object sender, EventArgs e)
+        {
+            ParserJSON parser = new ParserJSON();
+
+            if (txtNickname.Text != "")
+            {
+                //p.s.client = parser.ProfilCreation(txtNickname.Text);
+                //p.InitializeClientInfos();
+                pnlChooseNickname.Hide();
+                pnlStoryHuman.Show();
+            }
+            else
+                MessageBox.Show("Votre surnom ne doit pas être vide.");
         }
 
         private void btnNext_Click(object sender, EventArgs e)

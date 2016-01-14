@@ -46,6 +46,12 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlChooseClass = new System.Windows.Forms.Panel();
+            this.pnlChooseHuman = new System.Windows.Forms.Panel();
+            this.btnClosePnlHuman = new System.Windows.Forms.Button();
+            this.btnChoosingHuman = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnlChooseElves = new System.Windows.Forms.Panel();
             this.btnClosePnlElves = new System.Windows.Forms.Button();
             this.btnChoosingElves = new System.Windows.Forms.Button();
@@ -58,16 +64,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pnlChooseHuman = new System.Windows.Forms.Panel();
-            this.btnClosePnlHuman = new System.Windows.Forms.Button();
-            this.btnChoosingHuman = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnChooseElves = new System.Windows.Forms.PictureBox();
             this.btnChooseDwarfs = new System.Windows.Forms.PictureBox();
             this.btnChooseHuman = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pnlChooseNickname = new System.Windows.Forms.Panel();
+            this.btnNicknameOk = new System.Windows.Forms.Button();
+            this.txtNickname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlStoryHuman.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlStoryIntro.SuspendLayout();
@@ -77,15 +81,16 @@
             this.pnlStoryElves.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlChooseClass.SuspendLayout();
+            this.pnlChooseHuman.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnlChooseElves.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlChooseDwarfs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.pnlChooseHuman.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChooseElves)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChooseDwarfs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChooseHuman)).BeginInit();
+            this.pnlChooseNickname.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlStoryHuman
@@ -267,6 +272,69 @@
             this.pnlChooseClass.Size = new System.Drawing.Size(1234, 739);
             this.pnlChooseClass.TabIndex = 6;
             // 
+            // pnlChooseHuman
+            // 
+            this.pnlChooseHuman.Controls.Add(this.btnClosePnlHuman);
+            this.pnlChooseHuman.Controls.Add(this.btnChoosingHuman);
+            this.pnlChooseHuman.Controls.Add(this.label8);
+            this.pnlChooseHuman.Controls.Add(this.label9);
+            this.pnlChooseHuman.Controls.Add(this.pictureBox6);
+            this.pnlChooseHuman.Location = new System.Drawing.Point(151, 99);
+            this.pnlChooseHuman.Name = "pnlChooseHuman";
+            this.pnlChooseHuman.Size = new System.Drawing.Size(942, 561);
+            this.pnlChooseHuman.TabIndex = 4;
+            // 
+            // btnClosePnlHuman
+            // 
+            this.btnClosePnlHuman.Location = new System.Drawing.Point(858, 4);
+            this.btnClosePnlHuman.Name = "btnClosePnlHuman";
+            this.btnClosePnlHuman.Size = new System.Drawing.Size(53, 23);
+            this.btnClosePnlHuman.TabIndex = 4;
+            this.btnClosePnlHuman.Text = "close";
+            this.btnClosePnlHuman.UseVisualStyleBackColor = true;
+            this.btnClosePnlHuman.Click += new System.EventHandler(this.btnClosePnlHuman_Click);
+            // 
+            // btnChoosingHuman
+            // 
+            this.btnChoosingHuman.Location = new System.Drawing.Point(557, 390);
+            this.btnChoosingHuman.Name = "btnChoosingHuman";
+            this.btnChoosingHuman.Size = new System.Drawing.Size(174, 86);
+            this.btnChoosingHuman.TabIndex = 3;
+            this.btnChoosingHuman.Text = "Choisir";
+            this.btnChoosingHuman.UseVisualStyleBackColor = true;
+            this.btnChoosingHuman.Click += new System.EventHandler(this.btnChoosingHuman_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(443, 175);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(415, 130);
+            this.label8.TabIndex = 2;
+            this.label8.Text = resources.GetString("label8.Text");
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(448, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 36);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Human";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Sowaj.Properties.Resources.knight2_512;
+            this.pictureBox6.Location = new System.Drawing.Point(86, 116);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(288, 360);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
             // pnlChooseElves
             // 
             this.pnlChooseElves.Controls.Add(this.btnClosePnlElves);
@@ -393,69 +461,6 @@
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
-            // pnlChooseHuman
-            // 
-            this.pnlChooseHuman.Controls.Add(this.btnClosePnlHuman);
-            this.pnlChooseHuman.Controls.Add(this.btnChoosingHuman);
-            this.pnlChooseHuman.Controls.Add(this.label8);
-            this.pnlChooseHuman.Controls.Add(this.label9);
-            this.pnlChooseHuman.Controls.Add(this.pictureBox6);
-            this.pnlChooseHuman.Location = new System.Drawing.Point(151, 99);
-            this.pnlChooseHuman.Name = "pnlChooseHuman";
-            this.pnlChooseHuman.Size = new System.Drawing.Size(942, 561);
-            this.pnlChooseHuman.TabIndex = 4;
-            // 
-            // btnClosePnlHuman
-            // 
-            this.btnClosePnlHuman.Location = new System.Drawing.Point(858, 4);
-            this.btnClosePnlHuman.Name = "btnClosePnlHuman";
-            this.btnClosePnlHuman.Size = new System.Drawing.Size(53, 23);
-            this.btnClosePnlHuman.TabIndex = 4;
-            this.btnClosePnlHuman.Text = "close";
-            this.btnClosePnlHuman.UseVisualStyleBackColor = true;
-            this.btnClosePnlHuman.Click += new System.EventHandler(this.btnClosePnlHuman_Click);
-            // 
-            // btnChoosingHuman
-            // 
-            this.btnChoosingHuman.Location = new System.Drawing.Point(557, 390);
-            this.btnChoosingHuman.Name = "btnChoosingHuman";
-            this.btnChoosingHuman.Size = new System.Drawing.Size(174, 86);
-            this.btnChoosingHuman.TabIndex = 3;
-            this.btnChoosingHuman.Text = "Choisir";
-            this.btnChoosingHuman.UseVisualStyleBackColor = true;
-            this.btnChoosingHuman.Click += new System.EventHandler(this.btnChoosingHuman_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(443, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(415, 130);
-            this.label8.TabIndex = 2;
-            this.label8.Text = resources.GetString("label8.Text");
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(448, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 36);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Human";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Sowaj.Properties.Resources.knight2_512;
-            this.pictureBox6.Location = new System.Drawing.Point(86, 116);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(288, 360);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
             // btnChooseElves
             // 
             this.btnChooseElves.Image = global::Sowaj.Properties.Resources.archer3_512;
@@ -502,11 +507,48 @@
     "es races.\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlChooseNickname
+            // 
+            this.pnlChooseNickname.Controls.Add(this.btnNicknameOk);
+            this.pnlChooseNickname.Controls.Add(this.txtNickname);
+            this.pnlChooseNickname.Controls.Add(this.label10);
+            this.pnlChooseNickname.Location = new System.Drawing.Point(506, 309);
+            this.pnlChooseNickname.Name = "pnlChooseNickname";
+            this.pnlChooseNickname.Size = new System.Drawing.Size(314, 184);
+            this.pnlChooseNickname.TabIndex = 5;
+            // 
+            // btnNicknameOk
+            // 
+            this.btnNicknameOk.Location = new System.Drawing.Point(132, 140);
+            this.btnNicknameOk.Name = "btnNicknameOk";
+            this.btnNicknameOk.Size = new System.Drawing.Size(75, 23);
+            this.btnNicknameOk.TabIndex = 2;
+            this.btnNicknameOk.Text = "ok";
+            this.btnNicknameOk.UseVisualStyleBackColor = true;
+            this.btnNicknameOk.Click += new System.EventHandler(this.btnNicknameOk_Click);
+            // 
+            // txtNickname
+            // 
+            this.txtNickname.Location = new System.Drawing.Point(117, 83);
+            this.txtNickname.Name = "txtNickname";
+            this.txtNickname.Size = new System.Drawing.Size(100, 22);
+            this.txtNickname.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(101, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 17);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Choose a nickname";
+            // 
             // ChooseClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 752);
+            this.Controls.Add(this.pnlChooseNickname);
             this.Controls.Add(this.pnlChooseClass);
             this.Controls.Add(this.pnlStoryDwarfs);
             this.Controls.Add(this.pnlStoryElves);
@@ -528,18 +570,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlChooseClass.ResumeLayout(false);
             this.pnlChooseClass.PerformLayout();
+            this.pnlChooseHuman.ResumeLayout(false);
+            this.pnlChooseHuman.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pnlChooseElves.ResumeLayout(false);
             this.pnlChooseElves.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlChooseDwarfs.ResumeLayout(false);
             this.pnlChooseDwarfs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.pnlChooseHuman.ResumeLayout(false);
-            this.pnlChooseHuman.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChooseElves)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChooseDwarfs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChooseHuman)).EndInit();
+            this.pnlChooseNickname.ResumeLayout(false);
+            this.pnlChooseNickname.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -585,5 +629,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel pnlChooseNickname;
+        private System.Windows.Forms.TextBox txtNickname;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnNicknameOk;
     }
 }

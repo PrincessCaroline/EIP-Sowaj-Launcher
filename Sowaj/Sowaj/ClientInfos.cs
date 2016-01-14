@@ -6,53 +6,39 @@ using System.Threading.Tasks;
 
 namespace Sowaj
 {
-    class ClientInfos
+    public class ClientInfos
     {
-        private int profilId;
-        private String playerName;
-        private int iconId;
-        private int level;
-        private int exp;
-        private int NBvictories;
-        private int NBdefeats;
-        private int NBgames;
-        private int currentDeckId;
+        public int      rank_id;
+        public int      profile_id;
+        public int      points;
+        public String   nickName;
+        public int      division_id;
+        public int      best_points;
+        public int      best_rank;
+        public int      icon_id;
+        public int      level;
+        public int      division_name;
+        public int      league_number;
+        public int      div_number;
+        public int      minimum_points;
+        public int      maximum_points;
 
-        public void ClientInfos_Init()
+        public void     setUnknow()
         {
-            profilId = 1;
-            playerName = "Toto l'asticot";
-            iconId = 1;
-            level = 1;
-            exp = 546;
-            NBvictories = 3;
-            NBdefeats = 1;
-            NBgames = 4;
-            currentDeckId = 1;
+             rank_id = 0;
+             profile_id = 0;
+             points = 0;
+             nickName = "Lollipop";
+             division_id = 0;
+             best_points = 0;
+             best_rank = 0;
+             icon_id = 0;
+             level = 0;
+             division_name = 0;
+             league_number = 0;
+             div_number = 0;
+             minimum_points = 0;
+             maximum_points = 0;
         }
-
-        public void setProfilID(int id) { profilId = id; }
-        public int getProfilID() { return (profilId); }
-
-        public void setPlayerName(String name) { playerName = name; }
-        public String getPlayerName() { return (playerName); }
-
-        public void setLevel(int _level) { level = _level; }
-        public int getLevel() { return (level); }
-
-        public void setExp(int _exp) { exp = _exp; }
-        public int getExp() { return (exp); }
-
-        public void setNBvictories(int _NBvictories) { NBvictories = _NBvictories; }
-        public int getNBvictories() { return (NBvictories); }
-
-        public void setNBdefeats(int _NBdefeats) { NBdefeats = _NBdefeats; }
-        public int getNBdefeats() { return (NBdefeats); }
-
-        public void setNBgames(int _NBgames) { NBgames = _NBgames; }
-        public int getNBgames() { return (NBgames); }
-
-        public void setCurrentDeckId(int _currentDeckId) { currentDeckId = _currentDeckId; }
-        public int getCurrentDeckId() { return (currentDeckId); }
     }
 }

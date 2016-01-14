@@ -63,5 +63,9 @@ namespace Sowaj
         {
             s.AffRegister();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

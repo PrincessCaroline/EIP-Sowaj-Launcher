@@ -24,60 +24,58 @@ namespace Sowaj
 
             try
             {
-                // Create a request using a URL that can receive a post. 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AllowAutoRedirect = false;
-
-            // Set the Method property of the request to POST.
             request.Method = method;
-
-            // Set the ContentType property of the WebRequest.
             request.ContentType = "application/x-www-form-urlencoded";
-
-            // Set the ContentLength property of the WebRequest.
             request.ContentLength = param.Length;
 
-            // Get the request stream.
-            Stream dataStream = request.GetRequestStream();
-
-            // Write the data to the request stream.
+                Stream dataStream = request.GetRequestStream();
             dataStream.Write(param, 0, param.Length);
-
-            // Close the Stream object.
             dataStream.Close();
-
           
             //get response from the request
             response = (HttpWebResponse)request.GetResponse();
-
             StreamReader sr = new StreamReader(response.GetResponseStream());
-            //Console.Write("ICI" + sr.ReadToEnd());
-            //Console.WriteLine(((int)response.StatusCode).ToString());
-            return (sr.ReadToEnd());
+            String responseStr = sr.ReadToEnd();
+                if (responseStr == "")
+                    return (((int)response.StatusCode).ToString());
+                else
+                    return (responseStr);
             }
             catch (WebException e)
-        {
-            if (e.Status == WebExceptionStatus.ProtocolError)
             {
+
+                if (e.Status == WebExceptionStatus.ProtocolError)
+                {
                 response = (HttpWebResponse)e.Response;
 
                 Console.Write("CATCH : Errorcode: {0}", response);
                 return (((int)response.StatusCode).ToString());
-            }
-            else
-            {
+                }
+                else
+                {
                 Console.Write("CATCH : Error: {0}", e.Status);
                 return (e.Status.ToString());
+                }
             }
-        }
-        finally
-        {
-            if (response != null)
+            finally
             {
+                if (response != null)
+                {
                 response.Close();
+                }
             }
+            //           MessageBox.Show((int)httpRes.StatusCode);
         }
- //           MessageBox.Show((int)httpRes.StatusCode);
+
+        public String ProfilCreation(String nickname)
+        {
+            // Create POST data and convert it to a byte array.
+            string postData = "nickname=" + nickname;
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            string responseStr = SendHttpRequest("infosplayer", byteArray, "POST");
+            return (responseStr);
         }
 
         public String ServerConnect(String username, String pwd, String mail)
@@ -96,7 +94,7 @@ namespace Sowaj
 
             //Send connection request with param    
             String responseStr = SendHttpRequest("connection", byteArray, "POST");
-
+            //MessageBox.Show(responseStr);
             return (responseStr);
             
         } //OK
@@ -106,9 +104,12 @@ namespace Sowaj
             // Create POST data and convert it to a byte array.
             string postData = "login=" + login;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            //SendRequest("login", byteArray, "POST");
-            if (SendHttpRequest("login", byteArray, "POST") == "200")
+            string response = SendHttpRequest("login", byteArray, "POST");
+            if (response == "200")
+            {
+                Console.WriteLine("yes it's avaible");
                 return (true);
+            }
             else
                 return (false);
         } //OK
@@ -127,17 +128,17 @@ namespace Sowaj
 
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
-            String tmp = SendHttpRequest("registration", byteArray, "POST");
-            if (tmp == "200")
+            String responseStr = SendHttpRequest("registration", byteArray, "POST");
+            if (responseStr == "200")
                 return (true);
-            else if (tmp == "500")
+            else if (responseStr == "500")
             {
                 Console.WriteLine("INTERNAL ERROR");
                 return (false);
             }
             else
             {
-                Console.WriteLine("ERROOR BUT I DON4T KNOW WHY");
+                Console.WriteLine("ERROR BUT I DON'T KNOW WHY !! HAHA ! I'M SO SILLY");
             return (false);
             }
         } //OK

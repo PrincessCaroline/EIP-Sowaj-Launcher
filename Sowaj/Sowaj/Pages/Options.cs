@@ -42,7 +42,7 @@ namespace Sowaj
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            p.closeOptions();
+            p.btnSettings_Close();
         }
 
         private void btnChooseFrench_Click(object sender, EventArgs e)

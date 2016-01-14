@@ -58,7 +58,7 @@
             this.btnLogin.Location = new System.Drawing.Point(142, 142);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(102, 23);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Connection";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -68,17 +68,18 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(71, 107);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(151, 21);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Se souvenir de moi";
+            this.checkBox1.Size = new System.Drawing.Size(162, 21);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "Première Connection";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(71, 29);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(173, 22);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 1;
             // 
             // label1
             // 
@@ -94,7 +95,7 @@
             this.txtPassword.Location = new System.Drawing.Point(71, 74);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(173, 22);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
             // 
             // label3
             // 

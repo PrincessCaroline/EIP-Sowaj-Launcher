@@ -11,8 +11,6 @@ namespace Sowaj
 {
     class ParserJSON
     {
-        
-
         public Token   ServerConnect(String email, String password, String username)
         {
             RequestServer newreq = new RequestServer();
@@ -21,7 +19,7 @@ namespace Sowaj
             String responseJASON = newreq.ServerConnect(email, password, username);
 
             try
-            { //(responseJASON.ElementAt<char>(0) == '{')
+            { 
                 token = JsonConvert.DeserializeObject<Token>(responseJASON);
                 token.connectionAccepted = true;
             }
@@ -30,9 +28,26 @@ namespace Sowaj
                 token.connectionAccepted = false;
                 token.Tok = responseJASON;
             }
-            MessageBox.Show(token.Tok);
-
             return (token);
+        }
+
+        public ClientInfos ProfilCreation(String nickname)
+        {
+            RequestServer newreq = new RequestServer();
+            ClientInfos clientInfos = new ClientInfos();
+
+            String responseJASON = newreq.ProfilCreation(nickname);
+            MessageBox.Show(responseJASON);
+
+            try
+            {
+                clientInfos = JsonConvert.DeserializeObject<ClientInfos>(responseJASON);
+            }
+            catch
+            {
+                clientInfos.nickName = "Unknow";
+            }
+            return (clientInfos);
         }
     }
 }
