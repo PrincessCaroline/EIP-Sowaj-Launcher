@@ -38,3 +38,4 @@ C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\De
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\Newtonsoft.Json.xml
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.DetailPartie.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Chat.resources

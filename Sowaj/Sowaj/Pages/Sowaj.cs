@@ -20,9 +20,9 @@ namespace Sowaj
         public Sowaj()
         {
             InitializeComponent();
-            InitializePanel();
-            //AffLogin();
-            AffProfil();
+            InitializePanel_BeforeConnection();
+            AffLogin();
+            //AffProfil();
         }
 
         private void hidePanel()
@@ -34,6 +34,7 @@ namespace Sowaj
 
         public void AffLogin()
         {
+            InitializePanel_AfterConnection();
             hidePanel();
             pnlLogin.Show();
         }        
@@ -49,12 +50,11 @@ namespace Sowaj
             pnlProfil.Show();
         }
 
-        private void InitializePanel()
+        private void InitializePanel_BeforeConnection()
         {
             Console.WriteLine("je commence a init mes panels");
             Login       loginForm = new Login(this);
             Register    regForm = new Register(this);
-            Profil      profilForm = new Profil(this);
 
             //fill login panel with login form
             loginForm.TopLevel = false;
@@ -70,7 +70,11 @@ namespace Sowaj
             regForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             regForm.Dock = DockStyle.Fill;
             regForm.Show();
-            Console.WriteLine("reg panel init: DONE");
+            Console.WriteLine("reg panel init: DONE");            
+        }
+        private void InitializePanel_AfterConnection()
+        {
+            Profil profilForm = new Profil(this);
 
             //fill profil panel with profil form
             profilForm.TopLevel = false;
@@ -80,5 +84,6 @@ namespace Sowaj
             profilForm.Show();
             Console.WriteLine("profil panel init: DONE");
         }
+
     }
 }

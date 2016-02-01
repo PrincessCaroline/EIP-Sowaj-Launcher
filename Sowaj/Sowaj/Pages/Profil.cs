@@ -28,7 +28,7 @@ namespace Sowaj
             HidePanel();
             s.client.setUnknow();
             InitializeClientInfos();
-            //FirstConnection();
+            FirstConnection();
             load_text();
         }
 
@@ -65,7 +65,7 @@ namespace Sowaj
             pnlChooseClass.Hide();
         }
         private void FirstConnection()
-        {
+        {            
             pnlChooseClass.Show();
         }
 
@@ -123,12 +123,14 @@ namespace Sowaj
             btnAvatar.Image = newAvatar;
             pnlAvatarChoose.Hide();
             pnlFightHistory.Show();
+            pnlRankInfos.Show();
         }
 
         private void btnAvatar_Click(object sender, EventArgs e)
         {
             pnlAvatarChoose.Show();
             pnlFightHistory.Hide();
+            pnlRankInfos.Hide();
         }
 
 
@@ -137,12 +139,14 @@ namespace Sowaj
         {
             pnlFightHistory.Hide();
             pnlOptions.Show();
+            pnlRankInfos.Hide();
         }
 
         public void btnSettings_Close()
         {
             pnlOptions.Hide();
             pnlFightHistory.Show();
+            pnlRankInfos.Show();
         }
 
 
@@ -168,7 +172,7 @@ namespace Sowaj
             //add panel to this view
             this.Controls.Add(newPanel);
 
-            YPanelLocation += 160;
+            YPanelLocation += 186;
             return (newPanel);
         }
 

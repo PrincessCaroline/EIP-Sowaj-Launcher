@@ -28,6 +28,7 @@ namespace Sowaj
         private void hideError()
         {
             lblLoginWrong.Hide();
+            lblMailWrong.Text = "Votre pseudo doit avoir plus de 5 charactères.";
             lblMailWrong.Hide();
             lblMailWrong.Text = "Votre mail de confirmation doit être identique à votre email.";
             lblPasswordWrong.Hide();
@@ -84,6 +85,7 @@ namespace Sowaj
                 if (txtLogin.Text.Length < 5)
                 {
                     lblLoginWrong.Show();
+                    allGood = false;
                 }
                 if (IsValidEmail(txtEmail.Text) != false)
                 {
@@ -127,13 +129,20 @@ namespace Sowaj
                 if (allGood == true)
                 {
                     RequestServer newreq = new RequestServer();
-                    if (newreq.Register(txtLogin.Text, txtPassword.Text, txtEmail.Text, txtFirstName.Text, txtLastName.Text, "KR", dteBirthdate.Value.Date.ToString("dd/MM/yyyy")) == true)
-                        s.AffLogin();
-                    else
-                    {
-                        lblFillAllField.Text = "Registration fail :B" + dteBirthdate.Value.Date.ToString("dd/MM/yyyy");
-                        lblFillAllField.Show();
-                    }
+                    if (newreq.Register(txtLogin.Text, 
+                                        txtPassword.Text, 
+                                        txtEmail.Text, 
+                                        txtFirstName.Text, 
+                                        txtLastName.Text, "KR", 
+                                        dteBirthdate.Value.Date.ToString("dd/MM/yyyy")) == true &&
+                        newreq.ProfilCreation(txtLogin.Text) == true)
+                        {
+                            s.AffLogin();
+                        }
+                        else
+                        {
+                            MessageBox.Show("L'inscription à echoué :'(");
+                        }
                 }
             }
             else

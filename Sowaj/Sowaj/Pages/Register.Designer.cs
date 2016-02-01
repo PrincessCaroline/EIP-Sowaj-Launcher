@@ -50,13 +50,14 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblBirthDate = new System.Windows.Forms.Label();
             this.dteBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLoginAvaible)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 21;
@@ -66,7 +67,7 @@
             // 
             this.lblLoginWrong.AutoSize = true;
             this.lblLoginWrong.ForeColor = System.Drawing.Color.Crimson;
-            this.lblLoginWrong.Location = new System.Drawing.Point(12, 52);
+            this.lblLoginWrong.Location = new System.Drawing.Point(12, 55);
             this.lblLoginWrong.Name = "lblLoginWrong";
             this.lblLoginWrong.Size = new System.Drawing.Size(300, 17);
             this.lblLoginWrong.TabIndex = 28;
@@ -74,15 +75,15 @@
             // 
             // txtPasswordcomfirm
             // 
-            this.txtPasswordcomfirm.Location = new System.Drawing.Point(12, 245);
+            this.txtPasswordcomfirm.Location = new System.Drawing.Point(12, 266);
             this.txtPasswordcomfirm.Name = "txtPasswordcomfirm";
             this.txtPasswordcomfirm.Size = new System.Drawing.Size(236, 22);
-            this.txtPasswordcomfirm.TabIndex = 19;
+            this.txtPasswordcomfirm.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 74);
+            this.label2.Location = new System.Drawing.Point(12, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 22;
@@ -101,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 119);
+            this.label3.Location = new System.Drawing.Point(12, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 17);
             this.label3.TabIndex = 23;
@@ -109,17 +110,17 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 202);
+            this.txtPassword.Location = new System.Drawing.Point(12, 226);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(236, 22);
-            this.txtPassword.TabIndex = 18;
+            this.txtPassword.TabIndex = 4;
             // 
             // btnCreateAccount
             // 
             this.btnCreateAccount.Location = new System.Drawing.Point(402, 466);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(97, 29);
-            this.btnCreateAccount.TabIndex = 23;
+            this.btnCreateAccount.TabIndex = 9;
             this.btnCreateAccount.Text = "S\'enregistrer";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -127,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 184);
+            this.label4.Location = new System.Drawing.Point(12, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 17);
             this.label4.TabIndex = 24;
@@ -135,24 +136,24 @@
             // 
             // txtEmailcomfirm
             // 
-            this.txtEmailcomfirm.Location = new System.Drawing.Point(12, 138);
+            this.txtEmailcomfirm.Location = new System.Drawing.Point(12, 148);
             this.txtEmailcomfirm.Name = "txtEmailcomfirm";
             this.txtEmailcomfirm.Size = new System.Drawing.Size(236, 22);
-            this.txtEmailcomfirm.TabIndex = 17;
+            this.txtEmailcomfirm.TabIndex = 3;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(12, 27);
+            this.txtLogin.Location = new System.Drawing.Point(12, 31);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(236, 22);
-            this.txtLogin.TabIndex = 15;
+            this.txtLogin.TabIndex = 1;
             this.txtLogin.Leave += new System.EventHandler(this.txtLogin_Leave);
             // 
             // lblMailWrong
             // 
             this.lblMailWrong.AutoSize = true;
             this.lblMailWrong.ForeColor = System.Drawing.Color.Crimson;
-            this.lblMailWrong.Location = new System.Drawing.Point(12, 163);
+            this.lblMailWrong.Location = new System.Drawing.Point(12, 172);
             this.lblMailWrong.Name = "lblMailWrong";
             this.lblMailWrong.Size = new System.Drawing.Size(379, 17);
             this.lblMailWrong.TabIndex = 26;
@@ -161,7 +162,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 226);
+            this.label5.Location = new System.Drawing.Point(12, 247);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(176, 17);
             this.label5.TabIndex = 25;
@@ -169,16 +170,16 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(12, 93);
+            this.txtEmail.Location = new System.Drawing.Point(12, 107);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(236, 22);
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 2;
             // 
             // lblPasswordWrong
             // 
             this.lblPasswordWrong.AutoSize = true;
             this.lblPasswordWrong.ForeColor = System.Drawing.Color.Crimson;
-            this.lblPasswordWrong.Location = new System.Drawing.Point(12, 270);
+            this.lblPasswordWrong.Location = new System.Drawing.Point(12, 290);
             this.lblPasswordWrong.Name = "lblPasswordWrong";
             this.lblPasswordWrong.Size = new System.Drawing.Size(491, 17);
             this.lblPasswordWrong.TabIndex = 26;
@@ -187,7 +188,7 @@
             // pctLoginAvaible
             // 
             this.pctLoginAvaible.Image = global::Sowaj.Properties.Resources._1447310536_bullet_valid;
-            this.pctLoginAvaible.Location = new System.Drawing.Point(254, 14);
+            this.pctLoginAvaible.Location = new System.Drawing.Point(254, 18);
             this.pctLoginAvaible.Name = "pctLoginAvaible";
             this.pctLoginAvaible.Size = new System.Drawing.Size(41, 42);
             this.pctLoginAvaible.TabIndex = 29;
@@ -196,7 +197,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(15, 291);
+            this.lblFirstName.Location = new System.Drawing.Point(15, 321);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(57, 17);
             this.lblFirstName.TabIndex = 30;
@@ -204,22 +205,22 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(12, 311);
+            this.txtFirstName.Location = new System.Drawing.Point(12, 341);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(236, 22);
-            this.txtFirstName.TabIndex = 20;
+            this.txtFirstName.TabIndex = 6;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(12, 359);
+            this.txtLastName.Location = new System.Drawing.Point(12, 384);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(236, 22);
-            this.txtLastName.TabIndex = 21;
+            this.txtLastName.TabIndex = 7;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(15, 339);
+            this.lblLastName.Location = new System.Drawing.Point(15, 364);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(101, 17);
             this.lblLastName.TabIndex = 30;
@@ -228,7 +229,7 @@
             // lblBirthDate
             // 
             this.lblBirthDate.AutoSize = true;
-            this.lblBirthDate.Location = new System.Drawing.Point(15, 403);
+            this.lblBirthDate.Location = new System.Drawing.Point(15, 409);
             this.lblBirthDate.Name = "lblBirthDate";
             this.lblBirthDate.Size = new System.Drawing.Size(126, 17);
             this.lblBirthDate.TabIndex = 30;
@@ -236,10 +237,19 @@
             // 
             // dteBirthdate
             // 
-            this.dteBirthdate.Location = new System.Drawing.Point(12, 423);
+            this.dteBirthdate.Location = new System.Drawing.Point(13, 429);
             this.dteBirthdate.Name = "dteBirthdate";
             this.dteBirthdate.Size = new System.Drawing.Size(200, 22);
-            this.dteBirthdate.TabIndex = 22;
+            this.dteBirthdate.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 321);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 17);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Prénom";
             // 
             // Register
             // 
@@ -249,6 +259,7 @@
             this.Controls.Add(this.dteBirthdate);
             this.Controls.Add(this.lblBirthDate);
             this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtLastName);
@@ -300,5 +311,6 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblBirthDate;
         private System.Windows.Forms.DateTimePicker dteBirthdate;
+        private System.Windows.Forms.Label label7;
     }
 }

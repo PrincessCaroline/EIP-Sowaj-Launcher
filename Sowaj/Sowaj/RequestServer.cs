@@ -69,13 +69,20 @@ namespace Sowaj
             //           MessageBox.Show((int)httpRes.StatusCode);
         }
 
-        public String ProfilCreation(String nickname)
+        public bool ProfilCreation(String nickname)
         {
             // Create POST data and convert it to a byte array.
             string postData = "nickname=" + nickname;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             string responseStr = SendHttpRequest("infosplayer", byteArray, "POST");
-            return (responseStr);
+            MessageBox.Show("profil creation" + responseStr);
+            if (responseStr == "200")
+            {
+                Console.WriteLine("profil created");
+                return (true);
+            }
+            else
+                return (false);
         }
 
         public String ServerConnect(String username, String pwd, String mail)
@@ -104,8 +111,8 @@ namespace Sowaj
             // Create POST data and convert it to a byte array.
             string postData = "login=" + login;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            string response = SendHttpRequest("login", byteArray, "POST");
-            if (response == "200")
+            string responseStr = SendHttpRequest("login", byteArray, "POST");
+            if (responseStr == "200")
             {
                 Console.WriteLine("yes it's avaible");
                 return (true);
@@ -114,7 +121,13 @@ namespace Sowaj
                 return (false);
         } //OK
 
-        public bool Register(String login, String password, String mail, String firstname, String lastname, String nat, String birthdate)
+        public bool Register(String login, 
+                             String password, 
+                             String mail, 
+                             String firstname, 
+                             String lastname, 
+                             String nat, 
+                             String birthdate)
         {
             // Create POST data and convert it to a byte array.
             string postData =
@@ -129,6 +142,7 @@ namespace Sowaj
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
             String responseStr = SendHttpRequest("registration", byteArray, "POST");
+            MessageBox.Show("inscription" + responseStr);
             if (responseStr == "200")
                 return (true);
             else if (responseStr == "500")
@@ -142,15 +156,6 @@ namespace Sowaj
             return (false);
             }
         } //OK
-
-        public void PlayerInfos(String token, int playerId)
-        {
-            // Create POST data and convert it to a byte array.
-            string postData = "token=" + token;
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            //SendRequest("infosplayer", byteArray, "POST");
-            SendHttpRequest("infosplayer", byteArray, "POST");
-        }
 
         public String SendRequest(String requestName, byte[] param, String method)
         {

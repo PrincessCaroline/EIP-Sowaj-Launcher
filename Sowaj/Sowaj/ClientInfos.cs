@@ -28,7 +28,7 @@ namespace Sowaj
              rank_id = 0;
              profile_id = 0;
              points = 0;
-             nickName = "Lollipop";
+             nickName = "PrincesseCaro";
              division_id = 0;
              best_points = 0;
              best_rank = 0;
