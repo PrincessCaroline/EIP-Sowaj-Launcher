@@ -26,6 +26,7 @@ namespace Sowaj
             //s.music.Play();
             InitializePanels();
             HidePanel();
+            pnlRankInfos.Show();
             s.client.setUnknow();
             InitializeClientInfos();
             FirstConnection();
@@ -57,12 +58,21 @@ namespace Sowaj
             chooseClass.Dock = DockStyle.Fill;
             chooseClass.Show();
 
+            Ranking ranking = new Ranking(this);
+            ranking.TopLevel = false;
+            pnlRanking.Controls.Add(ranking);
+            ranking.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            ranking.Dock = DockStyle.Fill;
+            ranking.Show();
         }
         private void HidePanel()
         {
             pnlAvatarChoose.Hide();
             pnlOptions.Hide();
             pnlChooseClass.Hide();
+            pnlRanking.Hide();
+            pnlFightHistory.Hide();
+            pnlRankInfos.Hide();
         }
         private void FirstConnection()
         {            
@@ -128,18 +138,18 @@ namespace Sowaj
 
         private void btnAvatar_Click(object sender, EventArgs e)
         {
+            HidePanel();
             pnlAvatarChoose.Show();
-            pnlFightHistory.Hide();
-            pnlRankInfos.Hide();
+            //pnlFightHistory.Hide();
+            //pnlRankInfos.Hide();
         }
 
 
         //Method concerned by the SETTINGS
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            pnlFightHistory.Hide();
+            HidePanel();
             pnlOptions.Show();
-            pnlRankInfos.Hide();
         }
 
         public void btnSettings_Close()
@@ -186,6 +196,22 @@ namespace Sowaj
                 pnlFightHistory.Controls.Add(getFightHistory());
             }
         }
+
+
+        //Method conserned by the RANKING
+        private void btnRanking_Click(object sender, EventArgs e)
+        {
+            HidePanel();
+            pnlRanking.Show();
+        }
+
+        public void closeRanking()
+        {
+            pnlRanking.Hide();
+            pnlFightHistory.Show();
+            pnlRankInfos.Show();
+        }
+
 
         private void btnPlay_Click(object sender, EventArgs e)
         {

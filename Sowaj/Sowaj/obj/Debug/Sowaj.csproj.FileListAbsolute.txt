@@ -39,3 +39,5 @@ C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\De
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\Newtonsoft.Json.xml
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.DetailPartie.resources
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Chat.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Ranking.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.RankingProfilsInfos.resources

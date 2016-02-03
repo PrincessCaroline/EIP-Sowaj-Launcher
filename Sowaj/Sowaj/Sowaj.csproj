@@ -133,6 +133,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Ranking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ranking.Designer.cs">
+      <DependentUpon>Ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankingProfilsInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankingProfilsInfos.Designer.cs">
+      <DependentUpon>RankingProfilsInfos.cs</DependentUpon>
+    </Compile>
     <Compile Include="RequestServer.cs" />
     <Compile Include="Token.cs" />
     <EmbeddedResource Include="Pages\Chat.resx">
@@ -181,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ranking.resx">
+      <DependentUpon>Ranking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankingProfilsInfos.resx">
+      <DependentUpon>RankingProfilsInfos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -249,6 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\box_gold_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconsforecomcolored-19-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_attack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
