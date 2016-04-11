@@ -60,13 +60,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Chat.cs">
+    <Compile Include="Pages\Card.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Chat.Designer.cs">
-      <DependentUpon>Chat.cs</DependentUpon>
+    <Compile Include="Pages\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChooseCardsSkins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ChooseCardsSkins.Designer.cs">
+      <DependentUpon>ChooseCardsSkins.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientInfos.cs" />
+    <Compile Include="Pages\Deck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Deck.Designer.cs">
+      <DependentUpon>Deck.cs</DependentUpon>
+    </Compile>
     <Compile Include="en.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +88,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ItemFriends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ItemFriends.Designer.cs">
+      <DependentUpon>ItemFriends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FriendsChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FriendsChat.Designer.cs">
+      <DependentUpon>FriendsChat.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\DetailPartie.cs">
       <SubType>Form</SubType>
@@ -133,22 +157,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Ranking.cs">
+    <Compile Include="Pages\Ranking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ranking.Designer.cs">
+    <Compile Include="Pages\Ranking.Designer.cs">
       <DependentUpon>Ranking.cs</DependentUpon>
     </Compile>
-    <Compile Include="RankingProfilsInfos.cs">
+    <Compile Include="Pages\RankingProfilsInfos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RankingProfilsInfos.Designer.cs">
+    <Compile Include="Pages\RankingProfilsInfos.Designer.cs">
       <DependentUpon>RankingProfilsInfos.cs</DependentUpon>
     </Compile>
     <Compile Include="RequestServer.cs" />
     <Compile Include="Token.cs" />
-    <EmbeddedResource Include="Pages\Chat.resx">
-      <DependentUpon>Chat.cs</DependentUpon>
+    <EmbeddedResource Include="Pages\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ChooseCardsSkins.resx">
+      <DependentUpon>ChooseCardsSkins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Deck.resx">
+      <DependentUpon>Deck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="en.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,8 +188,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ItemFriends.resx">
+      <DependentUpon>ItemFriends.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\DetailPartie.resx">
       <DependentUpon>DetailPartie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FriendsChat.resx">
+      <DependentUpon>FriendsChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
@@ -194,10 +230,10 @@
     <EmbeddedResource Include="Pages\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ranking.resx">
+    <EmbeddedResource Include="Pages\Ranking.resx">
       <DependentUpon>Ranking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RankingProfilsInfos.resx">
+    <EmbeddedResource Include="Pages\RankingProfilsInfos.resx">
       <DependentUpon>RankingProfilsInfos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -273,6 +309,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1455745131_speech-bubble-dots-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinBack_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Try_full_shaw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill_test_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill_test_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill_test_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

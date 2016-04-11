@@ -31,6 +31,7 @@
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlRegister = new System.Windows.Forms.Panel();
             this.pnlProfil = new System.Windows.Forms.Panel();
+            this.pnlDeck = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // pnlLogin
@@ -52,16 +53,24 @@
             // 
             // pnlProfil
             // 
-            this.pnlProfil.Location = new System.Drawing.Point(191, 50);
+            this.pnlProfil.Location = new System.Drawing.Point(203, 71);
             this.pnlProfil.Name = "pnlProfil";
             this.pnlProfil.Size = new System.Drawing.Size(1276, 810);
-            this.pnlProfil.TabIndex = 2;
+            this.pnlProfil.TabIndex = 3;
+            // 
+            // pnlDeck
+            // 
+            this.pnlDeck.Location = new System.Drawing.Point(203, 71);
+            this.pnlDeck.Name = "pnlDeck";
+            this.pnlDeck.Size = new System.Drawing.Size(1276, 810);
+            this.pnlDeck.TabIndex = 3;
             // 
             // Sowaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1682, 953);
+            this.Controls.Add(this.pnlDeck);
             this.Controls.Add(this.pnlProfil);
             this.Controls.Add(this.pnlRegister);
             this.Controls.Add(this.pnlLogin);
@@ -77,6 +86,7 @@
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Panel pnlRegister;
         private System.Windows.Forms.Panel pnlProfil;
+        private System.Windows.Forms.Panel pnlDeck;
     }
 }
 

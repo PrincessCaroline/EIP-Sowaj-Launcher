@@ -49,8 +49,7 @@
             this.lblRank = new System.Windows.Forms.Label();
             this.lblGames = new System.Windows.Forms.Label();
             this.lblGamesNumber = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnFriends = new System.Windows.Forms.Button();
+            this.pnlMainButton = new System.Windows.Forms.Panel();
             this.btnShop = new System.Windows.Forms.Button();
             this.btnDeck = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
@@ -73,11 +72,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlRanking = new System.Windows.Forms.Panel();
+            this.pnlFriendsList = new System.Windows.Forms.Panel();
+            this.txtFriendName = new System.Windows.Forms.TextBox();
+            this.btnAddFriends = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlMainButton.SuspendLayout();
             this.pnlRankInfos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlFriendsList.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLogin
@@ -287,28 +290,15 @@
             this.lblGamesNumber.Text = "0";
             this.lblGamesNumber.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // panel3
+            // pnlMainButton
             // 
-            this.panel3.Controls.Add(this.btnFriends);
-            this.panel3.Controls.Add(this.btnShop);
-            this.panel3.Controls.Add(this.btnDeck);
-            this.panel3.Controls.Add(this.btnPlay);
-            this.panel3.Location = new System.Drawing.Point(1056, 130);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 468);
-            this.panel3.TabIndex = 7;
-            // 
-            // btnFriends
-            // 
-            this.btnFriends.BackColor = System.Drawing.Color.Transparent;
-            this.btnFriends.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnFriends.Location = new System.Drawing.Point(3, 351);
-            this.btnFriends.Name = "btnFriends";
-            this.btnFriends.Size = new System.Drawing.Size(194, 113);
-            this.btnFriends.TabIndex = 0;
-            this.btnFriends.Text = "Mes Amis";
-            this.btnFriends.UseVisualStyleBackColor = false;
-            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
+            this.pnlMainButton.Controls.Add(this.btnShop);
+            this.pnlMainButton.Controls.Add(this.btnDeck);
+            this.pnlMainButton.Controls.Add(this.btnPlay);
+            this.pnlMainButton.Location = new System.Drawing.Point(1055, 13);
+            this.pnlMainButton.Name = "pnlMainButton";
+            this.pnlMainButton.Size = new System.Drawing.Size(200, 350);
+            this.pnlMainButton.TabIndex = 7;
             // 
             // btnShop
             // 
@@ -331,6 +321,7 @@
             this.btnDeck.TabIndex = 0;
             this.btnDeck.Text = "Ma collection";
             this.btnDeck.UseVisualStyleBackColor = false;
+            this.btnDeck.Click += new System.EventHandler(this.btnDeck_Click);
             // 
             // btnPlay
             // 
@@ -529,18 +520,45 @@
             this.pnlRanking.TabIndex = 10;
             this.pnlRanking.Visible = false;
             // 
+            // pnlFriendsList
+            // 
+            this.pnlFriendsList.Controls.Add(this.txtFriendName);
+            this.pnlFriendsList.Controls.Add(this.btnAddFriends);
+            this.pnlFriendsList.Location = new System.Drawing.Point(1056, 367);
+            this.pnlFriendsList.Name = "pnlFriendsList";
+            this.pnlFriendsList.Size = new System.Drawing.Size(200, 384);
+            this.pnlFriendsList.TabIndex = 13;
+            // 
+            // txtFriendName
+            // 
+            this.txtFriendName.Location = new System.Drawing.Point(4, 360);
+            this.txtFriendName.Name = "txtFriendName";
+            this.txtFriendName.Size = new System.Drawing.Size(144, 22);
+            this.txtFriendName.TabIndex = 1;
+            // 
+            // btnAddFriends
+            // 
+            this.btnAddFriends.Location = new System.Drawing.Point(154, 360);
+            this.btnAddFriends.Name = "btnAddFriends";
+            this.btnAddFriends.Size = new System.Drawing.Size(45, 23);
+            this.btnAddFriends.TabIndex = 0;
+            this.btnAddFriends.Text = "Add";
+            this.btnAddFriends.UseVisualStyleBackColor = true;
+            this.btnAddFriends.Click += new System.EventHandler(this.btnAddFriends_Click);
+            // 
             // Profil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 763);
+            this.ClientSize = new System.Drawing.Size(1260, 763);
+            this.Controls.Add(this.pnlFriendsList);
             this.Controls.Add(this.pnlRankInfos);
             this.Controls.Add(this.pnlFightHistory);
             this.Controls.Add(this.pnlRanking);
             this.Controls.Add(this.pnlChooseClass);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.pnlAvatarChoose);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlMainButton);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -550,10 +568,12 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.pnlMainButton.ResumeLayout(false);
             this.pnlRankInfos.ResumeLayout(false);
             this.pnlRankInfos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlFriendsList.ResumeLayout(false);
+            this.pnlFriendsList.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -581,9 +601,8 @@
         private System.Windows.Forms.Label lblGames;
         private System.Windows.Forms.Label lblGamesNumber;
         private System.Windows.Forms.Label lblRatio;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlMainButton;
         private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.Button btnFriends;
         private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.Button btnDeck;
         private System.Windows.Forms.Panel pnlAvatarChoose;
@@ -605,5 +624,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRanking;
         private System.Windows.Forms.Panel pnlRanking;
+        private System.Windows.Forms.Panel pnlFriendsList;
+        private System.Windows.Forms.Button btnAddFriends;
+        private System.Windows.Forms.TextBox txtFriendName;
     }
 }

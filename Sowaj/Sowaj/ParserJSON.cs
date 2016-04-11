@@ -31,7 +31,7 @@ namespace Sowaj
             return (token);
         }
 
-        /*public ClientInfos ProfilCreation(String nickname)
+        public ClientInfos ProfilCreation(String nickname)
         {
             RequestServer newreq = new RequestServer();
             ClientInfos clientInfos = new ClientInfos();
@@ -45,9 +45,9 @@ namespace Sowaj
             }
             catch
             {
-                clientInfos.nickName = "Unknow";
+                clientInfos.nickname = "Unknow";
             }
             return (clientInfos);
-        }*/
+        }
     }
 }

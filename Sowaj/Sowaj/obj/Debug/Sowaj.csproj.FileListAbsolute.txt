@@ -38,6 +38,10 @@ C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\De
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\bin\Debug\Newtonsoft.Json.xml
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.DetailPartie.resources
-C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Chat.resources
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Ranking.resources
 C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.RankingProfilsInfos.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.ItemFriends.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Friends.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.ChooseCardsSkins.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Deck.resources
+C:\Users\PrincessCaroline\Documents\GitHub\EIP-Sowaj-Launcher\Sowaj\Sowaj\obj\Debug\Sowaj.Card.resources

@@ -27,13 +27,15 @@ namespace Sowaj
             InitializePanels();
             HidePanel();
             pnlRankInfos.Show();
-            s.client.setUnknow();
+            pnlFightHistory.Show();
+//            s.client.setUnknow();
             InitializeClientInfos();
-            FirstConnection();
+            //if (s.tokenConnection.Profiles.Length > 1)
+                FirstConnection();
             load_text();
         }
 
-        private void InitializePanels()
+        private void    InitializePanels()
         {
             setHistory();
 
@@ -65,7 +67,7 @@ namespace Sowaj
             ranking.Dock = DockStyle.Fill;
             ranking.Show();
         }
-        private void HidePanel()
+        private void    HidePanel()
         {
             pnlAvatarChoose.Hide();
             pnlOptions.Hide();
@@ -74,13 +76,23 @@ namespace Sowaj
             pnlFightHistory.Hide();
             pnlRankInfos.Hide();
         }
-        private void FirstConnection()
-        {            
-            pnlChooseClass.Show();
+        private void    FirstConnection()
+        {
+            MessageBox.Show("Premiere co");
+            ParserJSON newReq = new ParserJSON();
+            ClientInfos tmp = newReq.ProfilCreation("unsupernickname");
+            MessageBox.Show(tmp.nickname);
+            //pnlChooseClass.Show();
         }
 
+        public void     setClass(int classIndex)
+        {
+            pnlChooseClass.Hide();
+        }
+
+
         //Method concerned by languages
-        public void switch_language(char c)
+        public void     switch_language(char c)
         {
             if (c == 'f')
             {
@@ -92,11 +104,10 @@ namespace Sowaj
             }
             load_text();
         }
-        private void load_text()
+        private void    load_text()
         {
             btnPlay.Text = res_man.GetString("btnPlay");
             btnDeck.Text = res_man.GetString("btnDeck");
-            btnFriends.Text = res_man.GetString("btnFriends");
             btnShop.Text = res_man.GetString("btnShop");
             lblCard.Text = res_man.GetString("lblCard");
             lblRank.Text = res_man.GetString("lblRank");
@@ -107,10 +118,9 @@ namespace Sowaj
             lblLoose.Text = res_man.GetString("lblLoose");
             btnSettings.Text = res_man.GetString("btnSettings");
         }
-
-        public void InitializeClientInfos()
+        public void     InitializeClientInfos()
         {
-            lblLogin.Text = s.client.nickName;
+            lblLogin.Text = s.client.nickname;
             lblExperience.Text = s.client.points + "/" + s.client.maximum_points;
             progressBarExperience.Maximum = 1000;
             progressBarExperience.Minimum = 0;
@@ -121,22 +131,15 @@ namespace Sowaj
             //lblLooseNumber.Text = client.getNBdefeats().ToString();
         }
 
-        public void setClass(int classIndex)
-        {
-            pnlChooseClass.Hide();
-        }
-
-
         //Method concerned by the AVATAR
-        public void setAvatar(Image newAvatar)
+        public void     setAvatar(Image newAvatar)
         {
             btnAvatar.Image = newAvatar;
             pnlAvatarChoose.Hide();
             pnlFightHistory.Show();
             pnlRankInfos.Show();
         }
-
-        private void btnAvatar_Click(object sender, EventArgs e)
+        private void    btnAvatar_Click(object sender, EventArgs e)
         {
             HidePanel();
             pnlAvatarChoose.Show();
@@ -146,13 +149,12 @@ namespace Sowaj
 
 
         //Method concerned by the SETTINGS
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void    btnSettings_Click(object sender, EventArgs e)
         {
             HidePanel();
             pnlOptions.Show();
         }
-
-        public void btnSettings_Close()
+        public void     btnSettings_Close()
         {
             pnlOptions.Hide();
             pnlFightHistory.Show();
@@ -162,8 +164,9 @@ namespace Sowaj
 
 
         //Method concerned by the HISTORY
-        public int YPanelLocation = 1;
-        private Panel getFightHistory()
+        public int      YPanelLocation = 1;
+        private int     gameNbr = 0;
+        private Panel   getFightHistory()
         {
             Panel newPanel = new Panel();
             DetailPartie detail = new DetailPartie();
@@ -185,9 +188,7 @@ namespace Sowaj
             YPanelLocation += 186;
             return (newPanel);
         }
-
-        private int gameNbr = 0;
-        private void setHistory()
+        private void    setHistory()
         {
             pnlFightHistory.Controls.Clear();
             YPanelLocation = 1;
@@ -199,30 +200,64 @@ namespace Sowaj
 
 
         //Method conserned by the RANKING
-        private void btnRanking_Click(object sender, EventArgs e)
+        private void    btnRanking_Click(object sender, EventArgs e)
         {
             HidePanel();
             pnlRanking.Show();
         }
-
-        public void closeRanking()
+        public void     closeRanking()
         {
             pnlRanking.Hide();
             pnlFightHistory.Show();
             pnlRankInfos.Show();
         }
 
+    
+        //Method Conserned by FRIENDS
+        int YPanelLocation_ItemFriend = 1;
+        private Panel   getFriendItem(String _friendName)
+        {
+            Panel newPanel = new Panel();
+            ItemFriends detail = new ItemFriends();
 
-        private void btnPlay_Click(object sender, EventArgs e)
+            detail.setFriendName(_friendName);
+            //setposition and size of the panel
+            newPanel.Location = new Point(1, YPanelLocation_ItemFriend);
+            newPanel.Size = new Size(500, 50);
+
+            //add detailpartie view to newpanel
+            detail.TopLevel = false;
+            newPanel.Controls.Add(detail);
+            detail.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            detail.Dock = DockStyle.Fill;
+            detail.Show();
+
+            //add panel to this view
+            this.Controls.Add(newPanel);
+
+            YPanelLocation_ItemFriend += 50;
+            return (newPanel);
+        }
+        private void    setRankingFriendsProfilsInfos(String friendName)
+        {
+            pnlFriendsList.Controls.Add(getFriendItem(friendName));
+        }
+        private void    btnAddFriends_Click(object sender, EventArgs e)
+        {
+            if (txtFriendName.Text != "")
+                setRankingFriendsProfilsInfos(txtFriendName.Text);
+            else
+                MessageBox.Show("Vous devez écrire le nom de votre ami.");
+        }
+
+        private void    btnPlay_Click(object sender, EventArgs e)
         {
             gameNbr++;
             setHistory();
         }
-
-
-        private void btnFriends_Click(object sender, EventArgs e)
+        private void    btnDeck_Click(object sender, EventArgs e)
         {
-
+            s.AffDeck();
         }
     }
 }

@@ -134,8 +134,7 @@ namespace Sowaj
                                         txtEmail.Text, 
                                         txtFirstName.Text, 
                                         txtLastName.Text, "KR", 
-                                        dteBirthdate.Value.Date.ToString("dd/MM/yyyy")) == true &&
-                        newreq.ProfilCreation(txtLogin.Text) == true)
+                                        dteBirthdate.Value.Date.ToString("dd/MM/yyyy")) == true)
                         {
                             s.AffLogin();
                         }

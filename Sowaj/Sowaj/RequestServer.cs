@@ -17,7 +17,7 @@ namespace Sowaj
 
 
 
-        public String SendHttpRequest(String requestName, byte[] param, String method)
+        private String SendHttpRequest(String requestName, byte[] param, String method)
         {
             url += requestName;
             HttpWebResponse response = null;
@@ -69,23 +69,16 @@ namespace Sowaj
             //           MessageBox.Show((int)httpRes.StatusCode);
         }
 
-        public bool ProfilCreation(String nickname)
+        public String     ProfilCreation(String nickname)
         {
-            // Create POST data and convert it to a byte array.
             string postData = "nickname=" + nickname;
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             string responseStr = SendHttpRequest("infosplayer", byteArray, "POST");
-            MessageBox.Show("profil creation" + responseStr);
-            if (responseStr == "200")
-            {
-                Console.WriteLine("profil created");
-                return (true);
-            }
-            else
-                return (false);
+            MessageBox.Show("profil creation " + responseStr);
+            return (responseStr);
         }
 
-        public String ServerConnect(String username, String pwd, String mail)
+        public String   ServerConnect(String username, String pwd, String mail)
         {
             // Create POST data and convert it to a byte array
             String postData;
@@ -106,7 +99,7 @@ namespace Sowaj
             
         } //OK
 
-        public bool LoginAvaible(String login)
+        public bool     LoginAvaible(String login)
         {
             // Create POST data and convert it to a byte array.
             string postData = "login=" + login;
@@ -121,13 +114,13 @@ namespace Sowaj
                 return (false);
         } //OK
 
-        public bool Register(String login, 
-                             String password, 
-                             String mail, 
-                             String firstname, 
-                             String lastname, 
-                             String nat, 
-                             String birthdate)
+        public bool     Register(String login, 
+                                 String password, 
+                                 String mail, 
+                                 String firstname, 
+                                 String lastname, 
+                                 String nat, 
+                                 String birthdate)
         {
             // Create POST data and convert it to a byte array.
             string postData =
@@ -157,7 +150,7 @@ namespace Sowaj
             }
         } //OK
 
-        public String SendRequest(String requestName, byte[] param, String method)
+        public String   SendRequest(String requestName, byte[] param, String method)
         {
             url += requestName;
 

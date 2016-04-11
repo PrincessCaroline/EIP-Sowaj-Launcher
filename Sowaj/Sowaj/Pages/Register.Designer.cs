@@ -50,7 +50,6 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblBirthDate = new System.Windows.Forms.Label();
             this.dteBirthdate = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLoginAvaible)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 88);
+            this.label2.Location = new System.Drawing.Point(12, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 22;
@@ -110,7 +109,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 226);
+            this.txtPassword.Location = new System.Drawing.Point(12, 221);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(236, 22);
             this.txtPassword.TabIndex = 4;
@@ -128,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 207);
+            this.label4.Location = new System.Drawing.Point(12, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 17);
             this.label4.TabIndex = 24;
@@ -170,7 +169,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(12, 107);
+            this.txtEmail.Location = new System.Drawing.Point(12, 102);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(236, 22);
             this.txtEmail.TabIndex = 2;
@@ -197,7 +196,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(15, 321);
+            this.lblFirstName.Location = new System.Drawing.Point(15, 319);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(57, 17);
             this.lblFirstName.TabIndex = 30;
@@ -205,7 +204,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(12, 341);
+            this.txtFirstName.Location = new System.Drawing.Point(12, 338);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(236, 22);
             this.txtFirstName.TabIndex = 6;
@@ -242,15 +241,6 @@
             this.dteBirthdate.Size = new System.Drawing.Size(200, 22);
             this.dteBirthdate.TabIndex = 8;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 321);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 17);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "Prénom";
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,7 +249,6 @@
             this.Controls.Add(this.dteBirthdate);
             this.Controls.Add(this.lblBirthDate);
             this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtLastName);
@@ -311,6 +300,5 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblBirthDate;
         private System.Windows.Forms.DateTimePicker dteBirthdate;
-        private System.Windows.Forms.Label label7;
     }
 }
