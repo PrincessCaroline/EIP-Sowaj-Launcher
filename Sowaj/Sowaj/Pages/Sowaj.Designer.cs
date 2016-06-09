@@ -39,28 +39,32 @@
             this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlLogin.Location = new System.Drawing.Point(639, 269);
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.Location = new System.Drawing.Point(451, 290);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(365, 221);
+            this.pnlLogin.Size = new System.Drawing.Size(369, 225);
             this.pnlLogin.TabIndex = 0;
             // 
             // pnlRegister
             // 
-            this.pnlRegister.Location = new System.Drawing.Point(616, 130);
+            this.pnlRegister.BackColor = System.Drawing.Color.Transparent;
+            this.pnlRegister.Location = new System.Drawing.Point(379, 153);
             this.pnlRegister.Name = "pnlRegister";
-            this.pnlRegister.Size = new System.Drawing.Size(602, 672);
+            this.pnlRegister.Size = new System.Drawing.Size(518, 505);
             this.pnlRegister.TabIndex = 1;
             // 
             // pnlProfil
             // 
-            this.pnlProfil.Location = new System.Drawing.Point(203, 71);
+            this.pnlProfil.BackColor = System.Drawing.Color.Transparent;
+            this.pnlProfil.Location = new System.Drawing.Point(0, 0);
             this.pnlProfil.Name = "pnlProfil";
             this.pnlProfil.Size = new System.Drawing.Size(1276, 810);
             this.pnlProfil.TabIndex = 3;
             // 
             // pnlDeck
             // 
-            this.pnlDeck.Location = new System.Drawing.Point(203, 71);
+            this.pnlDeck.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDeck.Location = new System.Drawing.Point(0, 0);
             this.pnlDeck.Name = "pnlDeck";
             this.pnlDeck.Size = new System.Drawing.Size(1276, 810);
             this.pnlDeck.TabIndex = 3;
@@ -69,7 +73,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1682, 953);
+            this.BackgroundImage = global::Sowaj.Properties.Resources.CvdYfYz;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1258, 763);
             this.Controls.Add(this.pnlDeck);
             this.Controls.Add(this.pnlProfil);
             this.Controls.Add(this.pnlRegister);

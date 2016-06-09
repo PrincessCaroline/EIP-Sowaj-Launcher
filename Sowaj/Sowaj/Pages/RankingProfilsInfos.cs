@@ -16,5 +16,12 @@ namespace Sowaj
         {
             InitializeComponent();
         }
+
+        public void SetRankingProfilsInfos(ClientInfos profilInfos)
+        {
+            lblNickname.Text = profilInfos.nickname;
+            lblRankPoints.Text = profilInfos.points.ToString() + " PVP points";
+        }
+
     }
 }

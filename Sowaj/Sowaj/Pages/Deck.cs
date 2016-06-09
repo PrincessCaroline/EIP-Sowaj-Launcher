@@ -12,22 +12,53 @@ namespace Sowaj
 {
     public partial class Deck : Form
     {
-        Sowaj s;
+        Sowaj           s;
+        DeckInfos       currentDeck = new DeckInfos();
+        DeckInfos       newDeck = new DeckInfos();
+        int             currentDeckIt = 0;
+        DeckInfos_List  decksList;
+
         public Deck(Sowaj _s)
         {
             InitializeComponent();
             s = _s;
-            InitializePanels();
-            
+            InitializeNewDeck();
+            InitializeDeckEditor();
+            InitializePanels();            
         }
 
-        private void btnBackToProfil_Click(object sender, EventArgs e)
+        private void InitializeNewDeck()
+        {
+            newDeck.deck_name = "Nouveau deck";
+        }
+        private void    InitializeDeckEditor()
+        {
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            String rsp = newreq.DeckAll(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok);
+            decksList = parser.DeckAll(rsp);
+            if (decksList.data.Count > 0)
+                currentDeck = decksList.data[0];
+            else
+                currentDeck = newDeck;
+            UpdateDeckInfos();
+        }
+
+        private void    UpdateDeckInfos()
+        {
+            lblDeckName.Text = currentDeck.deck_name;
+            currentDeck.InitializationDeck();
+            lblCardNumberInfo.Text = currentDeck.deck_info_int.Count().ToString() + "/30";        
+        }
+
+        private void    btnBackToProfil_Click(object sender, EventArgs e)
         {
             s.AffProfil();
         }
 
         // Functions about PANELS
-        private void InitializePanels()
+        private void    InitializePanels()
         {
             ChooseCardsSkins ChooseSkinCards = new ChooseCardsSkins(this);
             ChooseSkinCards.TopLevel = false;
@@ -37,7 +68,7 @@ namespace Sowaj
             ChooseSkinCards.Show();
         }
 
-        private void HidePanels()
+        private void    HidePanels()
         {
             pnlChooseChampions.Hide();
             pnlEditDeck.Hide();
@@ -45,12 +76,12 @@ namespace Sowaj
         }
 
         // Functions about CARDSKINS
-        public void    setCardsSkin(Image newCardsSkin)
+        public void     setCardsSkin(Image newCardsSkin)
         {
             btnChooseCardsSkins.Image = newCardsSkin;
             pnlChooseSkinCards.SendToBack();
         }
-        private void btnChooseCardsSkins_Click(object sender, EventArgs e)
+        private void    btnChooseCardsSkins_Click(object sender, EventArgs e)
         {
             pnlChooseSkinCards.BringToFront();
         }
@@ -146,6 +177,86 @@ namespace Sowaj
         {
             HidePanels();
             pnlShowDeck.Show();
+        }
+
+        private void lblDeckName_Click(object sender, EventArgs e)
+        {
+            txtDeckName.Show();
+            btnRenameDeck.Show();
+        }
+
+        private void btnRenameDeck_Click(object sender, EventArgs e)
+        {
+            RequestServer newreq = new RequestServer();
+            ParserJSON parser = new ParserJSON();
+
+            if (txtDeckName.Text != "")
+            {
+/*                if (currentDeck != newDeck)
+                {
+                    String rsp = newreq.ModifyDeck(currentDeck.profile_id.ToString(),
+                                                   s.tokenConnection.Tok,
+                                                   currentDeck.deck_name,
+                                                   "",
+                                                   "action=modify",
+                                                   currentDeck.deck_id.ToString());
+                    MessageBox.Show("MODIFY DECK? : " + rsp);
+                    //decksList = parser.DeckAll(newreq.DeckAll(currentDeck.profile_id.ToString(), s.tokenConnection.Tok));
+                } */
+                currentDeck.deck_name = txtDeckName.Text;
+            }
+            txtDeckName.Hide();
+            btnRenameDeck.Hide();
+            UpdateDeckInfos();
+        }
+
+        private void pctNextDeck_Click(object sender, EventArgs e)
+        {
+            if (currentDeckIt < decksList.data.Count()-1)
+            {
+                currentDeckIt++;
+                currentDeck = decksList.data[currentDeckIt];
+            }
+            else if (currentDeckIt <= decksList.data.Count()-1)
+                currentDeck = newDeck;
+            UpdateDeckInfos();
+        }
+        private void pctPrevDeck_Click(object sender, EventArgs e)
+        {
+            if (currentDeckIt > 0 && currentDeck != newDeck)
+                currentDeckIt--;
+            currentDeck = decksList.data[currentDeckIt];
+            UpdateDeckInfos();
+            Console.WriteLine("deck ite : " + currentDeckIt.ToString());
+        }
+
+        private void btnCreateDeck_Click(object sender, EventArgs e)
+        {
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+            String rsp = newreq.CreateDeck(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok, currentDeck.deck_name, "");
+            MessageBox.Show("CREATE DECK ? : " + rsp);
+            
+            //decksList = parser.DeckAll(newreq.DeckAll(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok));
+        }
+        private void btnDeleteDeck_Click(object sender, EventArgs e)
+        {
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+            String rsp = newreq.DeleteDeck(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok, currentDeck.deck_id.ToString());
+          //  decksList = parser.DeckAll(newreq.DeckAll(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            decksList = parser.DeckAll(newreq.DeckAll(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok));
+            currentDeckIt = 0;
+            currentDeck = decksList.data[currentDeckIt];
+            InitializeNewDeck();
+            UpdateDeckInfos();
         }
     }
 }

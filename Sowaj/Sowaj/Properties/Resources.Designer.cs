@@ -193,6 +193,16 @@ namespace Sowaj.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CvdYfYz {
+            get {
+                object obj = ResourceManager.GetObject("CvdYfYz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diamond_1 {
             get {
                 object obj = ResourceManager.GetObject("diamond_1", resourceCulture);
@@ -266,6 +276,16 @@ namespace Sowaj.Properties {
         internal static System.Drawing.Bitmap orc2_512 {
             get {
                 object obj = ResourceManager.GetObject("orc2-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap popup_main_3 {
+            get {
+                object obj = ResourceManager.GetObject("popup_main_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -22,8 +22,6 @@ namespace Sowaj
             InitializeComponent();
             InitializePanel_BeforeConnection();
             AffLogin();
-            Deck newDeck = new Deck(this);
-            //AffProfil();
         }
 
         private void hidePanel()
@@ -100,7 +98,7 @@ namespace Sowaj
             deckForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             deckForm.Dock = DockStyle.Fill;
             deckForm.Show();
-            Console.WriteLine("profil panel init: DONE");
+            Console.WriteLine("deck panel init: DONE");
         }
 
     }

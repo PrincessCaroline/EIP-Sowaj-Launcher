@@ -28,65 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pctAvatar = new System.Windows.Forms.PictureBox();
+            this.lblNickname = new System.Windows.Forms.Label();
+            this.lblRankPoints = new System.Windows.Forms.Label();
+            this.pctRank = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRank)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pctAvatar
             // 
-            this.pictureBox1.Image = global::Sowaj.Properties.Resources._2;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pctAvatar.Image = global::Sowaj.Properties.Resources._2;
+            this.pctAvatar.Location = new System.Drawing.Point(2, 1);
+            this.pctAvatar.Name = "pctAvatar";
+            this.pctAvatar.Size = new System.Drawing.Size(63, 59);
+            this.pctAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctAvatar.TabIndex = 0;
+            this.pctAvatar.TabStop = false;
             // 
-            // label1
+            // lblNickname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Player Name";
+            this.lblNickname.AutoSize = true;
+            this.lblNickname.Location = new System.Drawing.Point(82, 9);
+            this.lblNickname.Name = "lblNickname";
+            this.lblNickname.Size = new System.Drawing.Size(89, 17);
+            this.lblNickname.TabIndex = 1;
+            this.lblNickname.Text = "Player Name";
             // 
-            // label2
+            // lblRankPoints
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(507, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "2042 PVP points";
+            this.lblRankPoints.AutoSize = true;
+            this.lblRankPoints.Location = new System.Drawing.Point(507, 25);
+            this.lblRankPoints.Name = "lblRankPoints";
+            this.lblRankPoints.Size = new System.Drawing.Size(113, 17);
+            this.lblRankPoints.TabIndex = 2;
+            this.lblRankPoints.Text = "2042 PVP points";
             // 
-            // pictureBox2
+            // pctRank
             // 
-            this.pictureBox2.Image = global::Sowaj.Properties.Resources.diamond_1;
-            this.pictureBox2.Location = new System.Drawing.Point(439, 1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(62, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.pctRank.Image = global::Sowaj.Properties.Resources.diamond_1;
+            this.pctRank.Location = new System.Drawing.Point(439, 1);
+            this.pctRank.Name = "pctRank";
+            this.pctRank.Size = new System.Drawing.Size(62, 59);
+            this.pctRank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctRank.TabIndex = 3;
+            this.pctRank.TabStop = false;
             // 
             // RankingProfilsInfos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 63);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pctRank);
+            this.Controls.Add(this.lblRankPoints);
+            this.Controls.Add(this.lblNickname);
+            this.Controls.Add(this.pctAvatar);
             this.Name = "RankingProfilsInfos";
             this.Text = "RankingProfilsInfos";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRank)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,9 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pctAvatar;
+        private System.Windows.Forms.Label lblNickname;
+        private System.Windows.Forms.Label lblRankPoints;
+        private System.Windows.Forms.PictureBox pctRank;
     }
 }

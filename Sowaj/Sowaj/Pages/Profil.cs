@@ -24,17 +24,18 @@ namespace Sowaj
             InitializeComponent();
             s = _s;
             //s.music.Play();
-            InitializePanels();
+            MessageBox.Show("profiles.lenght = " + s.tokenConnection.Profiles.Length.ToString());
+            if (s.tokenConnection.Profiles.Length < 1)
+                FirstConnection();
+            else
+                InitializeClientInfos();
             HidePanel();
+            InitializePanels();
             pnlRankInfos.Show();
             pnlFightHistory.Show();
-//            s.client.setUnknow();
-            InitializeClientInfos();
-            //if (s.tokenConnection.Profiles.Length > 1)
-                FirstConnection();
+            //            s.client.setUnknow();
             load_text();
         }
-
         private void    InitializePanels()
         {
             setHistory();
@@ -67,6 +68,13 @@ namespace Sowaj
             ranking.Dock = DockStyle.Fill;
             ranking.Show();
         }
+        private void    InitializeClientInfos()
+        {
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            s.client = parser.InfosPlayer(newreq.InfosPlayer(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok));
+        }
         private void    HidePanel()
         {
             pnlAvatarChoose.Hide();
@@ -78,11 +86,25 @@ namespace Sowaj
         }
         private void    FirstConnection()
         {
-            MessageBox.Show("Premiere co");
-            ParserJSON newReq = new ParserJSON();
-            ClientInfos tmp = newReq.ProfilCreation("unsupernickname");
-            MessageBox.Show(tmp.nickname);
+            //MessageBox.Show("Premiere co");
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            s.client = parser.InfosPlayer(newreq.ProfilCreation(s.tokenConnection.Nickname, s.tokenConnection.Tok));
+            //MessageBox.Show(tmp.nickname);
             //pnlChooseClass.Show();
+        }
+        public void     SetClientInfos()
+        {
+            lblLogin.Text = s.client.nickname;
+            lblExperience.Text = s.client.points + "/" + s.client.maximum_points;
+            progressBarExperience.Maximum = 1000;
+            progressBarExperience.Minimum = 0;
+            progressBarExperience.Value = s.client.points;
+            lblLevelNumber.Text = s.client.level.ToString();
+            //lblGamesNumber.Text = client.getNBgames().ToString();
+            //lblVictoryNumber.Text = client.getNBvictories().ToString();
+            //lblLooseNumber.Text = client.getNBdefeats().ToString();
         }
 
         public void     setClass(int classIndex)
@@ -117,18 +139,6 @@ namespace Sowaj
             lblVictory.Text = res_man.GetString("lblVictory");
             lblLoose.Text = res_man.GetString("lblLoose");
             btnSettings.Text = res_man.GetString("btnSettings");
-        }
-        public void     InitializeClientInfos()
-        {
-            lblLogin.Text = s.client.nickname;
-            lblExperience.Text = s.client.points + "/" + s.client.maximum_points;
-            progressBarExperience.Maximum = 1000;
-            progressBarExperience.Minimum = 0;
-            progressBarExperience.Value = s.client.points;
-            lblLevelNumber.Text = s.client.level.ToString();
-            //lblGamesNumber.Text = client.getNBgames().ToString();
-            //lblVictoryNumber.Text = client.getNBvictories().ToString();
-            //lblLooseNumber.Text = client.getNBdefeats().ToString();
         }
 
         //Method concerned by the AVATAR
@@ -173,7 +183,7 @@ namespace Sowaj
 
             //setposition and size of the panel
             newPanel.Location = new Point(1, YPanelLocation);
-            newPanel.Size = new Size(600, 186);
+            newPanel.Size = new Size(776, 186);
 
             //add detailpartie view to newpanel
             detail.TopLevel = false;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profil));
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblLevelNumber = new System.Windows.Forms.Label();
             this.progressBarExperience = new System.Windows.Forms.ProgressBar();
@@ -86,6 +87,8 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.ForeColor = System.Drawing.Color.Transparent;
             this.lblLogin.Location = new System.Drawing.Point(3, 4);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(56, 17);
@@ -95,6 +98,8 @@
             // lblLevelNumber
             // 
             this.lblLevelNumber.AutoSize = true;
+            this.lblLevelNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblLevelNumber.ForeColor = System.Drawing.Color.Transparent;
             this.lblLevelNumber.Location = new System.Drawing.Point(25, 187);
             this.lblLevelNumber.Name = "lblLevelNumber";
             this.lblLevelNumber.Size = new System.Drawing.Size(16, 17);
@@ -111,6 +116,8 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
+            this.lblLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lblLevel.ForeColor = System.Drawing.Color.Transparent;
             this.lblLevel.Location = new System.Drawing.Point(4, 187);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(21, 17);
@@ -130,6 +137,8 @@
             // lblCard
             // 
             this.lblCard.AutoSize = true;
+            this.lblCard.BackColor = System.Drawing.Color.Transparent;
+            this.lblCard.ForeColor = System.Drawing.Color.Transparent;
             this.lblCard.Location = new System.Drawing.Point(4, 258);
             this.lblCard.Name = "lblCard";
             this.lblCard.Size = new System.Drawing.Size(121, 17);
@@ -138,6 +147,8 @@
             // 
             // lblCardNumber
             // 
+            this.lblCardNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblCardNumber.ForeColor = System.Drawing.Color.Transparent;
             this.lblCardNumber.Location = new System.Drawing.Point(156, 258);
             this.lblCardNumber.Name = "lblCardNumber";
             this.lblCardNumber.Size = new System.Drawing.Size(46, 17);
@@ -148,6 +159,8 @@
             // lblTrophy
             // 
             this.lblTrophy.AutoSize = true;
+            this.lblTrophy.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrophy.ForeColor = System.Drawing.Color.Transparent;
             this.lblTrophy.Location = new System.Drawing.Point(4, 285);
             this.lblTrophy.Name = "lblTrophy";
             this.lblTrophy.Size = new System.Drawing.Size(138, 17);
@@ -156,6 +169,8 @@
             // 
             // lblTophyNumber
             // 
+            this.lblTophyNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblTophyNumber.ForeColor = System.Drawing.Color.Transparent;
             this.lblTophyNumber.Location = new System.Drawing.Point(156, 285);
             this.lblTophyNumber.Name = "lblTophyNumber";
             this.lblTophyNumber.Size = new System.Drawing.Size(46, 17);
@@ -187,6 +202,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::Sowaj.Properties.Resources.popup_main_3;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Controls.Add(this.btnAvatar);
             this.panel1.Controls.Add(this.lblLevelNumber);
@@ -205,6 +222,8 @@
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = global::Sowaj.Properties.Resources.popup_main_3;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.lblRatio);
             this.panel2.Controls.Add(this.lblLoose);
             this.panel2.Controls.Add(this.lblLooseNumber);
@@ -220,6 +239,8 @@
             // 
             // lblRatio
             // 
+            this.lblRatio.BackColor = System.Drawing.Color.Transparent;
+            this.lblRatio.ForeColor = System.Drawing.Color.Transparent;
             this.lblRatio.Location = new System.Drawing.Point(155, 122);
             this.lblRatio.Name = "lblRatio";
             this.lblRatio.Size = new System.Drawing.Size(47, 23);
@@ -230,6 +251,8 @@
             // lblLoose
             // 
             this.lblLoose.AutoSize = true;
+            this.lblLoose.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoose.ForeColor = System.Drawing.Color.Transparent;
             this.lblLoose.Location = new System.Drawing.Point(4, 92);
             this.lblLoose.Name = "lblLoose";
             this.lblLoose.Size = new System.Drawing.Size(132, 17);
@@ -238,6 +261,8 @@
             // 
             // lblLooseNumber
             // 
+            this.lblLooseNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblLooseNumber.ForeColor = System.Drawing.Color.Transparent;
             this.lblLooseNumber.Location = new System.Drawing.Point(156, 92);
             this.lblLooseNumber.Name = "lblLooseNumber";
             this.lblLooseNumber.Size = new System.Drawing.Size(46, 17);
@@ -248,6 +273,8 @@
             // lblVictory
             // 
             this.lblVictory.AutoSize = true;
+            this.lblVictory.BackColor = System.Drawing.Color.Transparent;
+            this.lblVictory.ForeColor = System.Drawing.Color.Transparent;
             this.lblVictory.Location = new System.Drawing.Point(4, 66);
             this.lblVictory.Name = "lblVictory";
             this.lblVictory.Size = new System.Drawing.Size(134, 17);
@@ -256,6 +283,8 @@
             // 
             // lblVictoryNumber
             // 
+            this.lblVictoryNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblVictoryNumber.ForeColor = System.Drawing.Color.Transparent;
             this.lblVictoryNumber.Location = new System.Drawing.Point(156, 66);
             this.lblVictoryNumber.Name = "lblVictoryNumber";
             this.lblVictoryNumber.Size = new System.Drawing.Size(46, 17);
@@ -266,6 +295,8 @@
             // lblRank
             // 
             this.lblRank.AutoSize = true;
+            this.lblRank.BackColor = System.Drawing.Color.Transparent;
+            this.lblRank.ForeColor = System.Drawing.Color.Transparent;
             this.lblRank.Location = new System.Drawing.Point(79, 10);
             this.lblRank.Name = "lblRank";
             this.lblRank.Size = new System.Drawing.Size(42, 17);
@@ -275,6 +306,8 @@
             // lblGames
             // 
             this.lblGames.AutoSize = true;
+            this.lblGames.BackColor = System.Drawing.Color.Transparent;
+            this.lblGames.ForeColor = System.Drawing.Color.Transparent;
             this.lblGames.Location = new System.Drawing.Point(4, 39);
             this.lblGames.Name = "lblGames";
             this.lblGames.Size = new System.Drawing.Size(125, 17);
@@ -283,6 +316,8 @@
             // 
             // lblGamesNumber
             // 
+            this.lblGamesNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblGamesNumber.ForeColor = System.Drawing.Color.Transparent;
             this.lblGamesNumber.Location = new System.Drawing.Point(156, 39);
             this.lblGamesNumber.Name = "lblGamesNumber";
             this.lblGamesNumber.Size = new System.Drawing.Size(46, 17);
@@ -378,6 +413,8 @@
             // pnlFightHistory
             // 
             this.pnlFightHistory.AutoScroll = true;
+            this.pnlFightHistory.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFightHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlFightHistory.Location = new System.Drawing.Point(225, 249);
             this.pnlFightHistory.Name = "pnlFightHistory";
             this.pnlFightHistory.Size = new System.Drawing.Size(825, 502);
@@ -385,6 +422,8 @@
             // 
             // pnlRankInfos
             // 
+            this.pnlRankInfos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlRankInfos.BackgroundImage")));
+            this.pnlRankInfos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlRankInfos.Controls.Add(this.btnRanking);
             this.pnlRankInfos.Controls.Add(this.button1);
             this.pnlRankInfos.Controls.Add(this.label5);
@@ -414,16 +453,20 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Image = global::Sowaj.Properties.Resources.box_gold_icon;
             this.button1.Location = new System.Drawing.Point(700, 107);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 106);
             this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(244, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 17);
@@ -433,6 +476,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(395, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 17);
@@ -442,6 +487,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(345, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 17);
@@ -451,6 +498,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(241, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 17);
@@ -460,6 +509,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Transparent;
             this.label8.Location = new System.Drawing.Point(767, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 17);
@@ -469,6 +520,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(238, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
@@ -478,6 +531,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Chocolate;
             this.label2.Location = new System.Drawing.Point(494, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 17);
@@ -493,6 +548,8 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(415, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 23);
@@ -502,6 +559,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Sowaj.Properties.Resources.diamond_1;
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -522,6 +580,8 @@
             // 
             // pnlFriendsList
             // 
+            this.pnlFriendsList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFriendsList.BackgroundImage")));
+            this.pnlFriendsList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlFriendsList.Controls.Add(this.txtFriendName);
             this.pnlFriendsList.Controls.Add(this.btnAddFriends);
             this.pnlFriendsList.Location = new System.Drawing.Point(1056, 367);
@@ -550,6 +610,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Sowaj.Properties.Resources.CvdYfYz;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1260, 763);
             this.Controls.Add(this.pnlFriendsList);
             this.Controls.Add(this.pnlRankInfos);

@@ -41,6 +41,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::Sowaj.Properties.Resources.popup_main_3;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.txtUsername);
@@ -48,14 +50,14 @@
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnRegister);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Location = new System.Drawing.Point(-2, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 221);
+            this.panel1.Size = new System.Drawing.Size(374, 230);
             this.panel1.TabIndex = 15;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(142, 142);
+            this.btnLogin.Location = new System.Drawing.Point(164, 142);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(102, 23);
             this.btnLogin.TabIndex = 4;
@@ -66,17 +68,19 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(71, 107);
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Location = new System.Drawing.Point(93, 107);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(162, 21);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Première Connection";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(71, 29);
+            this.txtUsername.Location = new System.Drawing.Point(93, 29);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(173, 22);
             this.txtUsername.TabIndex = 1;
@@ -84,7 +88,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 57);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(97, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 11;
@@ -92,7 +98,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(71, 74);
+            this.txtPassword.Location = new System.Drawing.Point(93, 74);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(173, 22);
             this.txtPassword.TabIndex = 2;
@@ -100,7 +106,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 12);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(97, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 10;
@@ -108,7 +116,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(142, 171);
+            this.btnRegister.Location = new System.Drawing.Point(164, 171);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(102, 27);
             this.btnRegister.TabIndex = 5;
@@ -122,6 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 225);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);

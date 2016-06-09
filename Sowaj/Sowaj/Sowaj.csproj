@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardInfos.cs" />
+    <Compile Include="DeckInfos.cs" />
     <Compile Include="Pages\Card.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +353,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\skill_test_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CvdYfYz.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -42,15 +42,16 @@ namespace Sowaj
             try
             {
                 var addr = new System.Net.Mail.MailAddress(txtUsername.Text);
-                s.tokenConnection = parser.ServerConnect("", txtPassword.Text, txtUsername.Text);
+                s.tokenConnection = parser.ServerConnect(newreq.ServerConnect("", txtPassword.Text, txtUsername.Text));
             }
             catch
             {
-                s.tokenConnection = parser.ServerConnect(txtUsername.Text, txtPassword.Text, "");
+                s.tokenConnection = parser.ServerConnect(newreq.ServerConnect(txtUsername.Text, txtPassword.Text, ""));
             }
 
             if (s.tokenConnection.connectionAccepted == true)
             {
+                s.tokenConnection.Nickname = txtUsername.Text;
                 s.AffProfil();
             }
             else

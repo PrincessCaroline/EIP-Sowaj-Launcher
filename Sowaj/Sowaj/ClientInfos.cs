@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sowaj
 {
+    public class ClientInfos_List
+    {
+        public List<ClientInfos> data{ get; set; }
+    }
+
     public class ClientInfos
     {
         public int      rank_id;
@@ -16,9 +21,9 @@ namespace Sowaj
         public int      division_id;
         public int      best_points;
         public int      best_rank;
-        public int      iconId;
+        public int      icon_id;
         public int      level;
-        public int      division_name;
+        public String   division_name;
         public int      league_number;
         public int      div_number;
         public int      minimum_points;
@@ -38,9 +43,9 @@ namespace Sowaj
              division_id = 0;
              best_points = 0;
              best_rank = 0;
-             iconId = 0;
+             icon_id = 0;
              level = 0;
-             division_name = 0;
+             division_name = "";
              league_number = 0;
              div_number = 0;
              minimum_points = 0;

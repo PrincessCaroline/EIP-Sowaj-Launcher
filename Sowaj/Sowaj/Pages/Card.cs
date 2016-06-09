@@ -12,12 +12,15 @@ namespace Sowaj
 {
     public partial class Card : Form
     {
-        Deck    d;
-        bool    editionMode;
-        public Card(Deck _d, bool isEdit)
+        Deck        d;
+        bool        editionMode;
+        CardInfos   infos;
+
+        public Card(Deck _d, bool isEdit)//, CardInfos _infos)
         {
             InitializeComponent();
             d = _d;
+//            infos = _infos;
             editionMode = isEdit;
             if (isEdit == false)
                 this.btnAddCard.Hide();

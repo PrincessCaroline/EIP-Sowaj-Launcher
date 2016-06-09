@@ -16,17 +16,18 @@ namespace Sowaj
         public Ranking(Profil _p)
         {
             InitializeComponent();
+            p = _p;
             setRankingFriendsProfilsInfos();
             setRankingWorldProfilsInfos();
             setRankingLocalProfilsInfos();
-            p = _p;
         }
 
         int YPanelLocation = 1;
-        private Panel getRankingProfilInfos()
+        private Panel getRankingProfilInfos(ClientInfos profilInfos)
         {
             Panel newPanel = new Panel();
             RankingProfilsInfos detail = new RankingProfilsInfos();
+            detail.SetRankingProfilsInfos(profilInfos);
 
             //setposition and size of the panel
             newPanel.Location = new Point(1, YPanelLocation);
@@ -45,34 +46,49 @@ namespace Sowaj
             YPanelLocation += 80;
             return (newPanel);
         }
-
         private void setRankingFriendsProfilsInfos()
         {
             tabPageFriends.Controls.Clear();
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            String rsp = newreq.RankOverall(p.s.client.profile_id, "friend", p.s.tokenConnection.Tok);
+            ClientInfos_List tmp = parser.RankOverall(rsp);
+
             YPanelLocation = 1;
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < tmp.data.Count() ; i++)
             {
-                tabPageFriends.Controls.Add(getRankingProfilInfos());
+                tabPageFriends.Controls.Add(getRankingProfilInfos(tmp.data[i]));
             }
         }
 
         private void setRankingWorldProfilsInfos()
         {
             tabPageWorld.Controls.Clear();
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            String rsp = newreq.RankOverall(p.s.client.profile_id, "all", p.s.tokenConnection.Tok);
+            ClientInfos_List tmp = parser.RankOverall(rsp);
             YPanelLocation = 1;
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < tmp.data.Count(); i++)
             {
-                tabPageWorld.Controls.Add(getRankingProfilInfos());
+                tabPageFriends.Controls.Add(getRankingProfilInfos(tmp.data[i]));
             }
         }
 
         private void setRankingLocalProfilsInfos()
         {
             tabPageLocal.Controls.Clear();
+            ParserJSON parser = new ParserJSON();
+            RequestServer newreq = new RequestServer();
+
+            String rsp = newreq.RankOverall(p.s.client.profile_id, "nat", p.s.tokenConnection.Tok);
+            ClientInfos_List tmp = parser.RankOverall(rsp);
             YPanelLocation = 1;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < tmp.data.Count(); i++)
             {
-                tabPageLocal.Controls.Add(getRankingProfilInfos());
+                tabPageFriends.Controls.Add(getRankingProfilInfos(tmp.data[i]));
             }
         }
 

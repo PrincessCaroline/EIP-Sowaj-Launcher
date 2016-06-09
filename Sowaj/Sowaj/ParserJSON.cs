@@ -11,43 +11,73 @@ namespace Sowaj
 {
     class ParserJSON
     {
-        public Token   ServerConnect(String email, String password, String username)
+
+        public Token   ServerConnect(String response)
         {
-            RequestServer newreq = new RequestServer();
             Token token = new Token();
 
-            String responseJASON = newreq.ServerConnect(email, password, username);
-
+//           MessageBox.Show("Connection : " + response);
             try
             { 
-                token = JsonConvert.DeserializeObject<Token>(responseJASON);
+                token = JsonConvert.DeserializeObject<Token>(response);
                 token.connectionAccepted = true;
             }
             catch
             {
                 token.connectionAccepted = false;
-                token.Tok = responseJASON;
+                token.Tok = response;
             }
             return (token);
         }
 
-        public ClientInfos ProfilCreation(String nickname)
+        public ClientInfos InfosPlayer(String response)
         {
-            RequestServer newreq = new RequestServer();
             ClientInfos clientInfos = new ClientInfos();
 
-            String responseJASON = newreq.ProfilCreation(nickname);
-            MessageBox.Show(responseJASON);
+            //MessageBox.Show("infosPlayer : " + response);
 
             try
             {
-                clientInfos = JsonConvert.DeserializeObject<ClientInfos>(responseJASON);
+                clientInfos = JsonConvert.DeserializeObject<ClientInfos>(response);
             }
             catch
             {
                 clientInfos.nickname = "Unknow";
             }
             return (clientInfos);
+        }
+
+        public ClientInfos_List RankOverall(String response)
+        {
+            ClientInfos_List profilsRanked;
+
+            response = "{\"data\":" + response + "}";
+            try
+            {
+                profilsRanked = JsonConvert.DeserializeObject<ClientInfos_List>(response);
+            }
+            catch
+            {
+                profilsRanked = null;
+            }
+            return (profilsRanked);
+        }
+
+        public DeckInfos_List DeckAll(String response)
+        {
+            DeckInfos_List decksList;
+
+            response = "{\"data\":" + response + "}";
+            MessageBox.Show(response);
+            try
+            {
+                decksList = JsonConvert.DeserializeObject<DeckInfos_List>(response);
+            }
+            catch
+            {
+                decksList = null;
+            }
+            return (decksList);
         }
     }
 }

@@ -61,6 +61,8 @@
             // 
             // panel5
             // 
+            this.panel5.BackgroundImage = global::Sowaj.Properties.Resources.popup_main_3;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.label3);
@@ -88,7 +90,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(11, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 124);
+            this.panel2.Size = new System.Drawing.Size(240, 124);
             this.panel2.TabIndex = 10;
             // 
             // pictureBox1
@@ -103,9 +105,10 @@
             // 
             // label2
             // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(98, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
+            this.label2.Size = new System.Drawing.Size(139, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "PrincesseCaro";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,7 +139,7 @@
             this.label6.Location = new System.Drawing.Point(98, 34);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(99, 17);
+            this.label6.Size = new System.Drawing.Size(128, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Niv. 18";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,15 +151,15 @@
             this.panel1.Controls.Add(this.lblOponentRace);
             this.panel1.Controls.Add(this.lblOponentRank);
             this.panel1.Controls.Add(this.lblOponentLevel);
-            this.panel1.Location = new System.Drawing.Point(406, 27);
+            this.panel1.Location = new System.Drawing.Point(389, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(226, 124);
+            this.panel1.Size = new System.Drawing.Size(243, 124);
             this.panel1.TabIndex = 10;
             // 
             // picOpponentAvatar
             // 
             this.picOpponentAvatar.Image = global::Sowaj.Properties.Resources.Neryë;
-            this.picOpponentAvatar.Location = new System.Drawing.Point(135, 9);
+            this.picOpponentAvatar.Location = new System.Drawing.Point(152, 9);
             this.picOpponentAvatar.Name = "picOpponentAvatar";
             this.picOpponentAvatar.Size = new System.Drawing.Size(81, 105);
             this.picOpponentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,9 +168,10 @@
             // 
             // lblOponentName
             // 
-            this.lblOponentName.Location = new System.Drawing.Point(14, 14);
+            this.lblOponentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOponentName.Location = new System.Drawing.Point(3, 14);
             this.lblOponentName.Name = "lblOponentName";
-            this.lblOponentName.Size = new System.Drawing.Size(116, 20);
+            this.lblOponentName.Size = new System.Drawing.Size(143, 20);
             this.lblOponentName.TabIndex = 7;
             this.lblOponentName.Text = "JeremyLeChat";
             this.lblOponentName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -175,7 +179,7 @@
             // lblOponentRace
             // 
             this.lblOponentRace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOponentRace.Location = new System.Drawing.Point(31, 85);
+            this.lblOponentRace.Location = new System.Drawing.Point(48, 85);
             this.lblOponentRace.Name = "lblOponentRace";
             this.lblOponentRace.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOponentRace.Size = new System.Drawing.Size(99, 17);
@@ -185,7 +189,7 @@
             // 
             // lblOponentRank
             // 
-            this.lblOponentRank.Location = new System.Drawing.Point(14, 65);
+            this.lblOponentRank.Location = new System.Drawing.Point(30, 65);
             this.lblOponentRank.Name = "lblOponentRank";
             this.lblOponentRank.Size = new System.Drawing.Size(116, 20);
             this.lblOponentRank.TabIndex = 7;
@@ -195,7 +199,7 @@
             // lblOponentLevel
             // 
             this.lblOponentLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOponentLevel.Location = new System.Drawing.Point(31, 34);
+            this.lblOponentLevel.Location = new System.Drawing.Point(48, 34);
             this.lblOponentLevel.Name = "lblOponentLevel";
             this.lblOponentLevel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOponentLevel.Size = new System.Drawing.Size(99, 17);
@@ -206,6 +210,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(539, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 17);
@@ -215,6 +221,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Transparent;
             this.label8.Location = new System.Drawing.Point(662, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 17);
@@ -224,6 +232,8 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(732, 112);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 17);
@@ -233,6 +243,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Transparent;
             this.label9.Location = new System.Drawing.Point(732, 70);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 17);
@@ -242,6 +254,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(662, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 17);
@@ -251,15 +265,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(304, 80);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(298, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 17);
+            this.label1.Size = new System.Drawing.Size(46, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "VS";
             // 
             // lblExpGain
             // 
             this.lblExpGain.AutoSize = true;
+            this.lblExpGain.BackColor = System.Drawing.Color.Transparent;
+            this.lblExpGain.ForeColor = System.Drawing.Color.Transparent;
             this.lblExpGain.Location = new System.Drawing.Point(8, 161);
             this.lblExpGain.Name = "lblExpGain";
             this.lblExpGain.Size = new System.Drawing.Size(114, 17);
@@ -276,7 +295,9 @@
             // lblDeckUsed
             // 
             this.lblDeckUsed.AutoSize = true;
-            this.lblDeckUsed.Location = new System.Drawing.Point(3, 4);
+            this.lblDeckUsed.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeckUsed.ForeColor = System.Drawing.Color.Transparent;
+            this.lblDeckUsed.Location = new System.Drawing.Point(9, 4);
             this.lblDeckUsed.Name = "lblDeckUsed";
             this.lblDeckUsed.Size = new System.Drawing.Size(138, 17);
             this.lblDeckUsed.TabIndex = 1;
@@ -285,20 +306,24 @@
             // lblBooty
             // 
             this.lblBooty.AutoSize = true;
-            this.lblBooty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBooty.BackColor = System.Drawing.Color.Transparent;
+            this.lblBooty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBooty.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblBooty.Location = new System.Drawing.Point(701, 7);
             this.lblBooty.Name = "lblBooty";
-            this.lblBooty.Size = new System.Drawing.Size(48, 20);
+            this.lblBooty.Size = new System.Drawing.Size(53, 20);
             this.lblBooty.TabIndex = 0;
             this.lblBooty.Text = "Butin";
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblResult.Location = new System.Drawing.Point(278, 7);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(66, 20);
+            this.lblResult.Size = new System.Drawing.Size(74, 20);
             this.lblResult.TabIndex = 0;
             this.lblResult.Text = "Victoire";
             // 
@@ -308,6 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 189);
             this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailPartie";
             this.Text = "DetailPartie";
             this.panel5.ResumeLayout(false);

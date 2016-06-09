@@ -9,6 +9,7 @@ namespace Sowaj
     public class Token
     {
         public String   Tok { get; set; }
+        public String   Nickname;
         public int[]    Profiles;
         public bool     connectionAccepted { get; set; }
 
