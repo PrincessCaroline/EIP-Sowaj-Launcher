@@ -13,23 +13,36 @@ namespace Sowaj
     public partial class Card : Form
     {
         Deck        d;
-        bool        editionMode;
         CardInfos   infos;
 
-        public Card(Deck _d, bool isEdit)//, CardInfos _infos)
+        public Card(Deck _d, CardInfos _i)
         {
             InitializeComponent();
             d = _d;
-//            infos = _infos;
-            editionMode = isEdit;
-            if (isEdit == false)
+            infos = _i;
+            if (infos.isEditable == false)
                 this.btnAddCard.Hide();
+        }
+        
+        public void     setCardInfos()
+        {
+            lblCardName.Text = infos.idCard.ToString();
         }
 
         private void btnAddCard_Click(object sender, EventArgs e)
         {
-            if (editionMode == true)
-                d.addCardToDeck();
+            bool inDeck = false;
+
+            if (infos.isEditable == true)
+            {
+                foreach (CardInfos element in d.currentDeck.card_list)
+                {
+                    if (infos.idCard == element.idCard)
+                        inDeck = true;
+                }
+                if (inDeck == false)
+                    d.currentDeck.AddCard(infos.idCard);
+            }
         }
     }
 }

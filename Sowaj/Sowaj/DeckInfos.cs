@@ -25,28 +25,42 @@ namespace Sowaj
 
         public void     InitializationDeck()
         {
-            DeckInfosParser();
+            DeckInfos_strToTab();
             InitlizationCardList();
         }
 
         public void     InitlizationCardList()
         {
-            if (deck_info_int.Length > 0)
-            {
                 foreach (int element in deck_info_int)
                 {
-                    card_list.Add(new CardInfos(element));
+                    Console.WriteLine("CREATE LIST [CHECK de l'it] : " + card_list.Count().ToString());
+                    int tmp = card_list.Count();
+                    card_list.Add(new CardInfos(element, tmp));
                 }
+        }
+
+        public int      getNewCardPosition()
+        {
+            int         pos = 0;
+
+            foreach (CardInfos element in card_list)
+            {
+                if (element.idCard != -1)
+                    pos++;
             }
+            return (pos);
         }
 
         public void     AddCard(int id)
         {
-            card_list.Add(new CardInfos(id));
+            card_list.Add(new CardInfos(id, getNewCardPosition()));
         }
 
-        public void    DeckInfosParser()
+        public void    DeckInfos_strToTab()
         {
+            for (int i = 0; i < deck_info_int.Length; i++)
+                deck_info_int[i] = -1;
+            
             deck_info = "[0,0,1,2,3]";
             int foundS1 = deck_info.IndexOf("[");
             int foundS2 = deck_info.IndexOf("]", foundS1 + 1);
@@ -58,11 +72,11 @@ namespace Sowaj
             }
 
             String[] tmp = deck_info.Split(',');
-            int i = 0;
+            int j = 0;
             foreach (String element in tmp)
             {
-                deck_info_int[i] = int.Parse(element);
-                i++;
+                deck_info_int[j] = int.Parse(element);
+                j++;
             }
         }
     }

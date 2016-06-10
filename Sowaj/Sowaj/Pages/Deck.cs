@@ -13,7 +13,7 @@ namespace Sowaj
     public partial class Deck : Form
     {
         Sowaj           s;
-        DeckInfos       currentDeck = new DeckInfos();
+        public DeckInfos       currentDeck = new DeckInfos();
         DeckInfos       newDeck = new DeckInfos();
         int             currentDeckIt = 0;
         DeckInfos_List  decksList;
@@ -87,13 +87,14 @@ namespace Sowaj
         }
         
         // Functions about CARDLIST 
-        private Panel getCardItem(int i, bool isEdit)
+        private Panel getCardItem(CardInfos infos)
         {
             Panel newPanel = new Panel();
-            Card detail = new Card(this, isEdit);
+            Card detail = new Card(this, infos);
+            detail.setCardInfos();
 
             //setposition and size of the panel
-            newPanel.Location = new Point(i, 1);
+            newPanel.Location = new Point(infos.pos, 1);
             newPanel.Size = new Size(223, 300);
 
             //add detailpartie view to newpanel
@@ -106,23 +107,15 @@ namespace Sowaj
             //add panel to this view
             this.Controls.Add(newPanel);
 
-            i += 223;
+//            i += 223;
             return (newPanel);
         }
         private void setCardToList(Panel pnlContainer, int i, bool isEdit)
         {
-            Panel tmp = getCardItem(i, isEdit);
-            pnlContainer.Controls.Add(tmp);
+//            Panel tmp = getCardItem(i, isEdit);
+ //           pnlContainer.Controls.Add(tmp);
 
         }
-
-        private int addCard_Location = 1;
-        public void addCardToDeck()
-        {
-            pnlShowDeck.Controls.Add(getCardItem(addCard_Location, false));
-            addCard_Location += 223;
-        }
-
 
         private void btnSelectChampion_Click(object sender, EventArgs e)
         {
@@ -145,37 +138,25 @@ namespace Sowaj
         private void btnEditDeck_Click(object sender, EventArgs e)
         {
             HidePanels();
-            int i = 1;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
-            setCardToList(pnlEditDeck, i, true);
-            i += 223;
+            s.client.InitializeCardList();
+            Console.WriteLine("EDIT CARD LIST size : " + s.client.card_list.Count());
+            foreach (CardInfos element in s.client.card_list)
+            {
+                Console.WriteLine("EDIT CARD LIST ID : " + element.idCard);
+                if (element.idCard != -1)
+                    pnlEditDeck.Controls.Add(getCardItem(element));
+            }
             pnlEditDeck.Show();
         }
 
         private void btnShowDeck_Click(object sender, EventArgs e)
         {
             HidePanels();
+            foreach (CardInfos element in currentDeck.card_list)
+            {
+                if (element.idCard != -1)
+                    pnlShowDeck.Controls.Add(getCardItem(element));
+            }
             pnlShowDeck.Show();
         }
 

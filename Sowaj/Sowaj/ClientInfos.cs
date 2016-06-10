@@ -13,26 +13,37 @@ namespace Sowaj
 
     public class ClientInfos
     {
-        public int      rank_id;
-        public int      user_id;
-        public int      profile_id;
-        public int      points;
-        public String   nickname;
-        public int      division_id;
-        public int      best_points;
-        public int      best_rank;
-        public int      icon_id;
-        public int      level;
-        public String   division_name;
-        public int      league_number;
-        public int      div_number;
-        public int      minimum_points;
-        public int      maximum_points;
-        public int      exp;
-        public int      mana;
-        public int      nbVictories;
-        public int      nbDefeats;
-        public int      nbGames;
+        public int              rank_id;
+        public int              user_id;
+        public int              profile_id;
+        public int              points;
+        public String           nickname;
+        public int              division_id;
+        public int              best_points;
+        public int              best_rank;
+        public int              icon_id;
+        public int              level;
+        public String           division_name;
+        public int              league_number;
+        public int              div_number;
+        public int              minimum_points;
+        public int              maximum_points;
+        public int              exp;
+        public int              mana;
+        public int              nbVictories;
+        public int              nbDefeats;
+        public int              nbGames;
+        public List<CardInfos>  card_list = new List<CardInfos>();
+
+        public void             InitializeCardList()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                CardInfos tmp = new CardInfos(i, i);
+                tmp.isEditable = true;
+                card_list.Add(tmp);
+            }
+        }
 
         public void     setUnknow()
         {

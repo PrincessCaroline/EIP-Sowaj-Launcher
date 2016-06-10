@@ -8,12 +8,15 @@ namespace Sowaj
 {
     public class CardInfos
     {
-        public CardInfos(int id)
+        public CardInfos(int id, int listpos)
         {
             idCard = id;
+            pos = listpos * 223;
         }
 
-        String      name;
+        public bool        isEditable = false;
+        public String      name;
         public int         idCard;
+        public int         pos;
     }
 }
