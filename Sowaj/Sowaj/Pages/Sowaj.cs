@@ -21,6 +21,8 @@ namespace Sowaj
         {
             InitializeComponent();
             InitializePanel_BeforeConnection();
+            Profil tmp = new Profil(this);
+            tmp.Show();
             AffLogin();
         }
 

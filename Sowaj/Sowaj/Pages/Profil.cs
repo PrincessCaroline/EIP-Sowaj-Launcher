@@ -24,11 +24,14 @@ namespace Sowaj
             InitializeComponent();
             s = _s;
             //s.music.Play();
-            MessageBox.Show("profiles.lenght = " + s.tokenConnection.Profiles.Length.ToString());
+            //            MessageBox.Show("profiles.lenght = " + s.tokenConnection.Profiles.Length.ToString());
+            InitializeAllCardList();
+/*
             if (s.tokenConnection.Profiles.Length < 1)
                 FirstConnection();
             else
                 InitializeClientInfos();
+  *///          InitializeAllCardList();
             HidePanel();
             InitializePanels();
             pnlRankInfos.Show();
@@ -36,6 +39,7 @@ namespace Sowaj
             //            s.client.setUnknow();
             load_text();
         }
+
         private void    InitializePanels()
         {
             setHistory();
@@ -74,6 +78,27 @@ namespace Sowaj
             RequestServer newreq = new RequestServer();
 
             s.client = parser.InfosPlayer(newreq.InfosPlayer(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok));
+        }
+        private void    InitializeAllCardList()
+        {
+            ParserJSON parser = new ParserJSON();
+            Console.WriteLine("HERE IN INIT CARD LIST");
+            // Read the file as one string.
+            System.IO.StreamReader myFile = new System.IO.StreamReader("C:\\Users\\PrincessCaroline\\Documents\\GitHub\\EIP-Sowaj-Launcher\\Sowaj\\Sowaj\\cards.json");
+            string JsonAllCardList = myFile.ReadToEnd();
+            myFile.Close();
+
+            CardsSingleton allCardsList_Singleton = CardsSingleton.Instance;
+            allCardsList_Singleton.AllCardsList = parser.AllCardsList(JsonAllCardList);
+            Console.WriteLine("HELOOOO");
+            Console.WriteLine("THERE IS : [" + allCardsList_Singleton.AllCardsList.data.Count() + "] CARDS");
+            foreach (CardInfos element in allCardsList_Singleton.AllCardsList.data)
+            {
+                Console.WriteLine("[" + element.className + "] ");
+            }
+//            Console.WriteLine(JsonAllCardList);
+          
+
         }
         private void    HidePanel()
         {

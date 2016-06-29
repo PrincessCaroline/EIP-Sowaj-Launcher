@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 
 namespace Sowaj
 {
+    public class CardInfos_List
+    {
+        public List<CardInfos> data { get; set; }
+    }
     public class CardInfos
     {
-        public CardInfos(int id, int listpos)
+        public CardInfos(int _id, int listpos)
         {
-            idCard = id;
+            idCard = _id;
             pos = listpos * 223;
         }
 
         public bool        isEditable = false;
         public String      name;
         public int         idCard;
+        public String      id;
+        public String      className;
         public int         pos;
     }
 }

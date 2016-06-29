@@ -235,8 +235,11 @@ namespace Sowaj
 
             decksList = parser.DeckAll(newreq.DeckAll(s.tokenConnection.Profiles[0].ToString(), s.tokenConnection.Tok));
             currentDeckIt = 0;
-            currentDeck = decksList.data[currentDeckIt];
             InitializeNewDeck();
+            if (decksList.data.Count() > 0)
+                currentDeck = decksList.data[currentDeckIt];
+            else
+                currentDeck = newDeck;           
             UpdateDeckInfos();
         }
     }

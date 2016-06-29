@@ -117,7 +117,6 @@ namespace Sowaj
             }
             //           MessageBox.Show((int)httpRes.StatusCode);
         }
-
         private String SendHttpRequest_GET(String requestName, String param, String method)
         {
             url += requestName + "?" + param;
@@ -208,7 +207,13 @@ namespace Sowaj
             MessageBox.Show("MODIFY deck: " + responseStr);
             return (responseStr);
         }
-
+        public String   DeckAll(String profileid, String token)
+        {
+            string getData = "token=" + token + "&profileid=" + profileid;
+            string responseStr = SendHttpRequest_GET("deckall", getData, "GET");
+//            MessageBox.Show(">> deckall  : " + responseStr);
+            return (responseStr);
+        }
         public String   InfosPlayer(String profileid, String token)
         {
            string getData = "profileid = " + profileid + "&token=" + token;
@@ -216,13 +221,7 @@ namespace Sowaj
            return (responseStr);
         }
 
-        public String   DeckAll(String profileid, String token)
-        {
-            string getData = "token=" + token + "&profileid=" + profileid;
-            string responseStr = SendHttpRequest_GET("deckall", getData, "GET");
-            MessageBox.Show(">> deckall  : " + responseStr);
-            return (responseStr);
-        }
+    
 
         public String   ServerConnect(String username, String pwd, String mail)
         {

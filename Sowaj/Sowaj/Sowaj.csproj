@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardInfos.cs" />
+    <Compile Include="CardsSingleton.cs" />
     <Compile Include="DeckInfos.cs" />
     <Compile Include="Pages\Card.cs">
       <SubType>Form</SubType>

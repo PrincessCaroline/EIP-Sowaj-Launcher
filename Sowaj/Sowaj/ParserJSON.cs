@@ -68,7 +68,7 @@ namespace Sowaj
             DeckInfos_List decksList;
 
             response = "{\"data\":" + response + "}";
-            MessageBox.Show(response);
+            //MessageBox.Show(response);
             try
             {
                 decksList = JsonConvert.DeserializeObject<DeckInfos_List>(response);
@@ -78,6 +78,24 @@ namespace Sowaj
                 decksList = null;
             }
             return (decksList);
+        }
+
+        public CardInfos_List AllCardsList(String response)
+        {
+            CardInfos_List      cardList;
+
+            response = "{\"data\":" + response + "}";
+            //MessageBox.Show(response);
+            try
+            {
+                cardList = JsonConvert.DeserializeObject<CardInfos_List>(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("HERE =====" + e.ToString());
+                cardList = null;
+            }
+            return (cardList);
         }
     }
 }
